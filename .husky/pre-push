@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Pre-push hook...'
+printf "\e[1;34mRunning tests for backend...\e[0m \n"
+yarn --cwd ./backend test
+
+printf "\e[1;34mRunning tests for frontend...\e[0m \n"
+yarn --cwd ./frontend test
+

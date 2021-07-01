@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-typescript/base",
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "rules": {
+    "max-len": ["error", 120],
+    "@typescript-eslint/lines-between-class-members": "off",
+    "import/prefer-default-export": "off"
+  }
+}

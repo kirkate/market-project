@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Pre-commit hook...'
+printf "\e[1;34mRunning linters for frontend...\e[0m \n"
+yarn --cwd ./frontend lint
+
+printf "\e[1;34mRunning linters for backend...\e[0m \n"
+yarn --cwd ./backend lint
