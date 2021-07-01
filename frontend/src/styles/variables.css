@@ -1,0 +1,6 @@
+:host([theme="tui"]) {
+  --font-family: 'tui-light';
+  --font-size: 16px;
+  --text-color: #4c4c4c;
+  --heading-text-color: #092a5e;
+}

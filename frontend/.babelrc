@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "ie": "11"
+      }
+    }],
+    ["@babel/react", {
+      "pragma": "h"
+    }],
+    ["@babel/typescript", {
+      "isTSX": true,
+      "allExtensions": true,
+      "jsxPragma": "h"
+    }]
+  ],
+  "plugins": [
+    "jsx-control-statements",
+    "@babel/plugin-proposal-class-properties"
+  ]
+}

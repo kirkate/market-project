@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb-typescript",
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
+  "rules": {
+    "max-len": ["error", 120],
+    "react/prop-types": "off",
+    "react/jsx-no-undef": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "import/prefer-default-export": "off",
+    "react/no-unknown-property": ["error", {
+      "ignore": ["class"]
+    }]
+  }
+}

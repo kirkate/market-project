@@ -1,0 +1,11 @@
+@custom-media --xsmall (max-width: 579px);
+@custom-media --small-and-up (min-width: 580px);
+@custom-media --small (width >=580px) and (width <=759px);
+@custom-media --medium-and-up (min-width: 760px);
+@custom-media --medium-and-below (max-width: 759px);
+@custom-media --medium (width >=760px) and (width <=959px);
+@custom-media --large-and-up (min-width: 960px);
+@custom-media --large-and-below (max-width: 959px);
+@custom-media --large (width >=960px) and (width <=1920px);
+@custom-media --xlarge-and-up (min-width: 1921px);
+@custom-media --ie10up (-ms-high-contrast: active), (-ms-high-contrast: none);

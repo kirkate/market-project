@@ -1,0 +1,29 @@
+:host {
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 24px;
+
+  color: var(--heading-text-color);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+p {
+  margin: 24px 0;
+
+  line-height: 1.5;
+}
