@@ -1,5 +1,5 @@
 import { h, render } from 'preact';
-import { App } from './App';
+import { App } from './Root';
 
 describe('<App />', () => {
   afterAll(() => {

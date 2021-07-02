@@ -13,12 +13,14 @@ export default {
     clean: true,
     filename: '[name].js',
     path: distFolderPath,
+    publicPath: '/',
     environment: {
       arrowFunction: false,
     },
   },
   devServer: {
     contentBase: distFolderPath,
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.css', '.js', '.jsx', '.ts', '.tsx'],

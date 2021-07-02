@@ -1,5 +1,5 @@
 import { h, render } from 'preact';
-import { App } from './App';
+import { Root } from './components/Root/Root';
 import { supportedThemes, themeAttributeName, themeNames } from './constants/themes';
 // @ts-ignore
 import css from './styles.css';
@@ -22,7 +22,7 @@ customElements.define('mfe-boilerplate', class extends HTMLElement {
 
   // eslint-disable-next-line class-methods-use-this
   connectedCallback() {
-    render(h(App, null), mainEl);
+    render(h(Root, null), mainEl);
   }
 
   // eslint-disable-next-line class-methods-use-this
