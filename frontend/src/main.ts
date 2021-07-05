@@ -1,5 +1,5 @@
 import { h, render } from 'preact';
-import { Root } from './components/Root/Root';
+import { Root } from './Root';
 import { supportedThemes, themeAttributeName, themeNames } from './constants/themes';
 // @ts-ignore
 import css from './styles.css';
