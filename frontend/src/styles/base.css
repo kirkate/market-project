@@ -1,9 +1,9 @@
 html {
- box-sizing: border-box;
- height: 100%;
- margin: 0;
- padding: 0;
-} 
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -31,6 +31,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 24px;
+
   color: var(--heading-text-color);
   font-weight: normal;
   line-height: 1.2;
@@ -38,5 +39,6 @@ h6 {
 
 p {
   margin: 24px 0;
+
   line-height: 1.5;
 }
