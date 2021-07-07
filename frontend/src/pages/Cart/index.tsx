@@ -1,3 +1,10 @@
 import { h } from 'preact';
+import { Header } from '../../components/Header/index';
 
-export const Cart = () => <p>Cart</p>;
+export const Cart = () => (
+  <div>
+    <Header />
+    {' '}
+    <p>Cart</p>
+  </div>
+);
