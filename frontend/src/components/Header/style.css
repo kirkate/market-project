@@ -1,0 +1,6 @@
+.header {
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-around;
+  align-items: center;
+}

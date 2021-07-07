@@ -1,9 +1,10 @@
 import { h } from 'preact';
-import { Banner } from '../Banner';
+import { Banner } from '../../components/Banner/index';
+import { Header } from '../../components/Header/index';
 
 export const Home = () => (
-  <p>
-    Home
+  <div>
+    <Header />
     <Banner />
-  </p>
+  </div>
 );
