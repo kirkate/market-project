@@ -20,7 +20,6 @@ export const Banner = ({ slides, slideTime }) => {
     <section class="banner">
       {slides && (
       <div>
-        {' '}
         <div class="slides">
           <For each="slide" of={slides} index="slideIndex">
             <figure
@@ -28,7 +27,7 @@ export const Banner = ({ slides, slideTime }) => {
                 active: slideIndex === activeSlideIndex,
               })}
             >
-              <img src={slide.src} alt="" />
+              <img src={slide.src} srcSet={slide.srcset} sizes={slide.sizes} alt="" />
             </figure>
           </For>
         </div>
