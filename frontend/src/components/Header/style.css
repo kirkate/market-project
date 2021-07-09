@@ -1,0 +1,6 @@
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: var(--header-height);
+}
