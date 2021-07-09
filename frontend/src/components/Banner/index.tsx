@@ -21,15 +21,28 @@ export const Banner = ({ slides, slideTime }) => {
       {slides && (
       <div>
         <div class="slides">
-          <For each="slide" of={slides} index="slideIndex">
+          {/* <For each="slide" of={slides} index="slideIndex">
             <figure
               class={classnames('slide', {
                 active: slideIndex === activeSlideIndex,
               })}
             >
               <img src={slide.src} srcSet={slide.srcset} sizes={slide.sizes} alt="" />
-            </figure>
+            </figure> */}
+
+          {/* </For>
+           */}
+          <For each="slide" of={slides} index="slideIndex">
+            <picture
+              class={classnames('slide', {
+                active: slideIndex === activeSlideIndex,
+              })}
+            >
+              <img src={slide.src} srcSet={slide.srcset} sizes={slide.sizes} alt="" />
+              <source srcSet={slide.source} media="(max-width: 600px)" type={slide.type} />
+            </picture>
           </For>
+
         </div>
 
         <div class="banner-dots">

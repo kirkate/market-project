@@ -37,8 +37,8 @@
   }
 
   .banner-dot {
-    width: 11px;
-    height: 11px;
+    width: 4px;
+    height: 4px;
 
     background-color: transparent;
     border: 2px solid var(--color-white);
@@ -48,5 +48,12 @@
       background-color: var(--color-white);
       border: 2px solid var(--color-white);
     }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .banner .banner-dot {
+    width: 8px;
+    height: 8px;
   }
 }
