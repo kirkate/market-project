@@ -2,9 +2,9 @@ import { h } from 'preact';
 import { Route, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'preact/hooks';
 import { getSideBarData } from '../../services/api';
-import { Category } from '../Category';
+import { Products } from '../Products';
 
-export const SideBar = ({ match }) => {
+export const SideBar = () => {
   const [categories, setCategories] = useState(null);
 
   useEffect(() => {
@@ -14,31 +14,29 @@ export const SideBar = ({ match }) => {
   }, []);
 
   return (
-    <aside class="sidebar">
-      <If condition={categories}>
-        <section class="categories">
-          <ul>
+    <section class="store">
+      <aside class="sidebar">
+        <If condition={categories}>
+          <ul class="categories">
             <For each="category" of={categories}>
               <li key={category.id} class="category">
-                <NavLink to={`${match.url}${category.path}`}>
+
+                <NavLink to={`/store/${category.id}`}>
                   {category.title}
                 </NavLink>
               </li>
             </For>
           </ul>
 
-          <Route
-            path={`${match.path}/:category`}
-            render={(props) => {
-              const subCategory = props.match.params.category;
-              const category = categories.find(
-                (model) => `/${subCategory}` === model.path,
-              );
-              return <Category category={category.models} />;
-            }}
-          />
-        </section>
-      </If>
-    </aside>
+        </If>
+      </aside>
+      <ul class="products">
+        <Route
+          path="/store/:id"
+          component={Products}
+        />
+      </ul>
+    </section>
+
   );
 };

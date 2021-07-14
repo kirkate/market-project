@@ -10,7 +10,6 @@ import { routes } from './constants/routes';
 import { Header } from './components/Header/index';
 
 export const App = () => (
-
   <Router basename="/">
     <Header />
     <Switch>
@@ -22,5 +21,4 @@ export const App = () => (
       <Route path="*" exact component={NotFound} />
     </Switch>
   </Router>
-
 );

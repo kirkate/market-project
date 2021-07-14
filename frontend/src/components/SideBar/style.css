@@ -1,15 +1,22 @@
-.sidebar {
+.store {
   display: flex;
+
+  .sidebar {
+    display: flex;
+  }
 
   .categories {
     display: flex;
+    flex-direction: column;
 
-    ul {
-      list-style: none;
-    }
+    list-style: none;
   }
 
   .category {
     padding: 8px 15px;
+  }
+
+  .products {
+    list-style: none;
   }
 }
