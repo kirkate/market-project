@@ -1,22 +1,9 @@
-.store {
-  display: flex;
-
-  .sidebar {
-    display: flex;
-  }
-
+.sidebar {
   .categories {
-    display: flex;
-    flex-direction: column;
-
     list-style: none;
   }
 
   .category {
     padding: 8px 15px;
-  }
-
-  .products {
-    list-style: none;
   }
 }

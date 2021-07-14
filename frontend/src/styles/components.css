@@ -2,3 +2,5 @@
 @import '../components/Header/style.css';
 @import '../components/SideBar/style.css';
 @import '../components/Container/style.css';
+@import '../components/Products/style.css';
+@import '../pages/Store/style.css';
