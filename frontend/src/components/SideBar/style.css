@@ -1,0 +1,9 @@
+.sidebar {
+  .categories {
+    list-style: none;
+  }
+
+  .category {
+    padding: 8px 15px;
+  }
+}

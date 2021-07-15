@@ -17,6 +17,7 @@ export const App = () => (
       <Route path={routes.cart} component={Cart} />
       <Route path={routes.products} component={Products} />
       <Route path={routes.checkout} component={Checkout} />
+      <Route path={routes.categories} component={Store} />
       <Route path={routes.store} component={Store} />
       <Route path="*" exact component={NotFound} />
     </Switch>

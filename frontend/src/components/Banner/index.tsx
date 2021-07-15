@@ -17,7 +17,7 @@ export const Banner = ({ slides, slideTime }) => {
 
   return (
     <section class="banner">
-      {slides && (
+      <If condition={slides}>
         <div>
           <div class="slides">
             <For each="slide" of={slides} index="slideIndex">
@@ -45,7 +45,7 @@ export const Banner = ({ slides, slideTime }) => {
             </For>
           </div>
         </div>
-      )}
+      </If>
     </section>
   );
 };

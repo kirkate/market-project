@@ -15,7 +15,9 @@ export const Header = () => (
         <Route exact path={routes.home}>
           Contacts
         </Route>
-        <Route path="*">Cart</Route>
+        <Route path="*">
+          <NavLink to={routes.cart}>Cart</NavLink>
+        </Route>
       </Switch>
     </nav>
   </header>
