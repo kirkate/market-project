@@ -45,84 +45,93 @@ export const getBannerData = () => new Promise((resolve) => {
   ]);
 });
 
-export const getSideBarData = () => new Promise((resolve) => {
+export const getCaterogiesData = () => new Promise((resolve) => {
   resolve([
     {
       id: '1',
+      slug: 'iphone',
       title: 'iPhone',
     },
     {
       id: '2',
+      slug: 'ipad',
       title: 'iPad',
     },
     {
       id: '3',
+      slug: 'watch',
       title: 'Watch',
     },
     {
       id: '4',
+      slug: 'samsung',
       title: 'Samsung',
     },
     {
       id: '5',
+      slug: 'accessories',
       title: 'Accessories',
     },
     {
       id: '6',
+      slug: 'gadgets',
       title: 'Gadgets',
     },
   ]);
 });
 
-export const getProductsData = () => new Promise((resolve) => {
-  resolve([
+export const getCategoryData = (id) => new Promise((resolve) => {
+  const categoryData = [
     {
       id: '1',
       products: [
-        { title: 'iPhone 12' },
-        { title: 'iPhone 11' },
-        { title: 'iPhone X' },
+        { id: '11', title: 'iPhone 12' },
+        { id: '12', title: 'iPhone 11' },
+        { id: '13', title: 'iPhone X' },
       ],
     },
     {
       id: '2',
       products: [
-        { title: 'iPad Pro 12.9' },
-        { title: 'iPad Pro 11' },
-        { title: 'iPad Pro 10.2' },
+        { id: '14', title: 'iPad Pro 12.9' },
+        { id: '15', title: 'iPad Pro 11' },
+        { id: '16', title: 'iPad Pro 10.2' },
       ],
     },
     {
       id: '3',
       products: [
-        { title: 'Series 6' },
-        { title: 'Watch SE' },
-        { title: 'Series 5' },
+        { id: '17', title: 'Series 6' },
+        { id: '18', title: 'Watch SE' },
+        { id: '19', title: 'Series 5' },
       ],
     },
     {
       id: '4',
       products: [
-        { title: 'Galaxy S21' },
-        { title: 'Galaxy Note 20 Ultra' },
-        { title: 'Galaxy Note 20' },
+        { id: '20', title: 'Galaxy S21' },
+        { id: '21', title: 'Galaxy Note 20 Ultra' },
+        { id: '22', title: 'Galaxy Note 20' },
       ],
     },
     {
       id: '5',
       products: [
-        { title: 'Apple Accessories' },
-        { title: 'iPhone cases' },
-        { title: 'Mac Accessories' },
+        { id: '23', title: 'Apple Accessories' },
+        { id: '24', title: 'iPhone cases' },
+        { id: '25', title: 'Mac Accessories' },
       ],
     },
     {
       id: '6',
       products: [
-        { title: 'Playstation 5' },
-        { title: 'Grado SR80x headphones' },
-        { title: 'Fujifilm Instax Mini 40 camera' },
+        { id: '26', title: 'Playstation 5' },
+        { id: '27', title: 'Grado SR80x headphones' },
+        { id: '28', title: 'Fujifilm Instax Mini 40 camera' },
       ],
     },
-  ]);
+  ];
+
+  const activeCategory = categoryData.find((item) => item.id === id);
+  resolve(activeCategory.products);
 });

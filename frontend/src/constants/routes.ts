@@ -1,8 +1,9 @@
 export const routes = {
   home: '/',
   store: '/store',
-  categoryId: '/store/:categoryId',
-  products: '/products',
+  categories: '/store/:categorySlug',
+  products: '/store/:categorySlug/:subCategorySlug',
+  product: '/product/:productSlug',
   checkout: '/checkout',
   cart: '/cart',
 };
