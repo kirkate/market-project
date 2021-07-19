@@ -1,0 +1,7 @@
+.filter-categoties {
+  display: flex;
+}
+
+.subCategories {
+  list-style: none;
+}

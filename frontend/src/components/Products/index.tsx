@@ -1,11 +1,13 @@
 import { h } from 'preact';
+import { Button } from '../Button/index';
 
-export const Products = ({ products }) => (
+export const Products = ({ products, addToCart }) => (
   <If condition={products}>
     <ul class="products">
-      <For each="item" of={products}>
-        <li key={item.id}>
-          <p>{item.title}</p>
+      <For each="product" of={products}>
+        <li key={product.id} class="product">
+          <p>{product.title}</p>
+          <Button name="+" onClick={addToCart} />
         </li>
       </For>
     </ul>

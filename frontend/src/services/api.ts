@@ -135,3 +135,59 @@ export const getCategoryData = (id) => new Promise((resolve) => {
   const activeCategory = categoryData.find((item) => item.id === id);
   resolve(activeCategory.products);
 });
+
+export const getProductsData = (id) => new Promise((resolve) => {
+  const subCategoryData = [
+    {
+      id: '11',
+      products: [
+        { id: '111', title: 'iPhone 12 64 GB' },
+        { id: '121', title: 'iPhone 12 128 GB ' },
+        { id: '131', title: 'iPhone 12 256 GB' },
+      ],
+    },
+    {
+      id: '12',
+      products: [
+        { id: '112', title: 'iPhone 11 64 GB' },
+        { id: '122', title: 'iPhone 11 128 GB ' },
+        { id: '132', title: 'iPhone 11 256 GB' },
+      ],
+    },
+    {
+      id: '13',
+      products: [
+        { id: '113', title: 'iPhone X 64 GB' },
+        { id: '123', title: 'iPhone X 128 GB ' },
+        { id: '133', title: 'iPhone X 256 GB' },
+      ],
+    },
+    {
+      id: '14',
+      products: [
+        { id: '144', title: 'iPad Pro 12.9 64 GB' },
+        { id: '154', title: 'iPad Pro 12.9 64 GB' },
+        { id: '164', title: 'iPad Pro 12.9 64 GB' },
+      ],
+    },
+    {
+      id: '15',
+      products: [
+        { id: '145', title: 'iPad Pro 12.9 128 GB' },
+        { id: '155', title: 'iPad Pro 12.9 128 GB' },
+        { id: '165', title: 'iPad Pro 12.9 128 GB' },
+      ],
+    },
+    {
+      id: '16',
+      products: [
+        { id: '146', title: 'iPad Pro 12.9 256 GB' },
+        { id: '156', title: 'iPad Pro 12.9 256 GB' },
+        { id: '166', title: 'iPad Pro 12.9 256 GB' },
+      ],
+    },
+  ];
+
+  const activeSubCategory = subCategoryData.find((item) => item.id === id);
+  resolve(activeSubCategory);
+});
