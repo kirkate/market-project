@@ -8,9 +8,8 @@ export const SideBar = ({ categories, onCategoryClick }) => (
         <For each="category" of={categories}>
           <li key={category.id} class="category">
             <a
-              data-id={category.id}
               href={`/store/${category.slug}`}
-              onClick={onCategoryClick.bind(null, category.slug)}
+              onClick={onCategoryClick.bind(null, category.id)}
             >
               {category.title}
             </a>

@@ -1,3 +1,10 @@
 .products {
+  display: flex;
+  justify-content: space-between;
+
   list-style: none;
+
+  .product {
+    padding: 15px;
+  }
 }
