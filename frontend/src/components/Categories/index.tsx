@@ -2,7 +2,7 @@ import { h } from 'preact';
 
 import { useEffect, useState } from 'preact/hooks';
 import { useParams, useHistory } from 'react-router-dom';
-import { SideBar } from '../SideBar/index';
+import { SideBar } from '../SideBar';
 import { getCategoryData, getCaterogiesData } from '../../services/api';
 
 export const Categories = ({ onSubCategoryClick }) => {
@@ -11,7 +11,7 @@ export const Categories = ({ onSubCategoryClick }) => {
 
   const [categories, setCategories] = useState(null);
   const [activeIdCategory, setActiveIdCategory] = useState('1');
-  const [subCategories, setSubCatgories] = useState(null);
+  const [subCategories, setSubCategories] = useState(null);
 
   useEffect(() => {
     getCaterogiesData().then((result) => {
@@ -21,7 +21,7 @@ export const Categories = ({ onSubCategoryClick }) => {
 
   useEffect(() => {
     getCategoryData(activeIdCategory).then((data) => {
-      data && setSubCatgories(data);
+      data && setSubCategories(data);
     });
   }, [params]);
 
@@ -33,7 +33,7 @@ export const Categories = ({ onSubCategoryClick }) => {
   }
 
   return (
-    <div class="filter-categoties">
+    <div class="filter-categories">
       <SideBar categories={categories} onCategoryClick={handleCategoryClick} />
       <If condition={subCategories}>
         <ul class="subCategories">
