@@ -1,6 +1,6 @@
-import { h } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
-import { CartService } from '../../services/cartService';
+import { h } from "preact";
+import { useEffect, useState } from "preact/hooks";
+import { CartService } from "../../services/cartService";
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
@@ -21,13 +21,7 @@ export const Cart = () => {
 
   return (
     <section>
-      { cart ? (
-        <p>
-          Cart (
-          {cart.length}
-          )
-        </p>
-      ) : <p>Cart is empty</p>}
+      <p>Cart ({cart.length})</p>
       <If condition={cart}>
         <ul class="cartList">
           <For each="cartItem" of={cart}>
@@ -42,14 +36,21 @@ export const Cart = () => {
                 max={100}
                 onChange={() => handleChangeQuantity(cartItem.id, event)}
               />
-              <button type="button" onClick={() => handleDeleteProduct(cartItem.id)}>
+              <button
+                type="button"
+                onClick={() => handleDeleteProduct(cartItem.id)}
+              >
                 delete
               </button>
             </li>
           </For>
         </ul>
       </If>
-      {cart && cart.length > 0 && <button type="button" onClick={handleClear}>Clear all</button>}
+      {cart && cart.length > 0 && (
+        <button type="button" onClick={handleClear}>
+          Clear all
+        </button>
+      )}
     </section>
   );
 };
