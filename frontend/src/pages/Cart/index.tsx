@@ -1,6 +1,6 @@
-import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import { CartService } from "../../services/cartService";
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
+import { CartService } from '../../services/cartService';
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
@@ -13,9 +13,7 @@ export const Cart = () => {
 
   useEffect(() => {
     setTotalPrice(
-      cart.reduce((sum, i) => {
-        return sum + i.price * (i.quantity || 1);
-      }, 0)
+      cart.reduce((sum, i) => sum + i.price * (i.quantity || 1), 0),
     );
   }, [cart.length, quantityProducts]);
 
@@ -35,7 +33,11 @@ export const Cart = () => {
 
   return (
     <section>
-      <p>Cart ({cart.length})</p>
+      <p>
+        Cart (
+        {cart.length}
+        )
+      </p>
       <form onSubmit={handleSubmitPurchases}>
         <If condition={cart}>
           <ul class="cartList">
@@ -54,7 +56,8 @@ export const Cart = () => {
                 <span>
                   {cartItem.quantity
                     ? cartItem.price * cartItem.quantity
-                    : cartItem.price}{" "}
+                    : cartItem.price}
+                  {' '}
                   $
                 </span>
                 <button
@@ -68,15 +71,20 @@ export const Cart = () => {
           </ul>
         </If>
         {cart && cart.length > 0 && (
+        <div>
           <button type="button" onClick={handleClearCart}>
             Clear all
           </button>
-        )}
-        <div>
-          <p>Total price</p>
-          <span>${totalPrice}</span>
+          <div>
+            <p>Total price</p>
+            <span>
+              $
+              {totalPrice}
+            </span>
+          </div>
+          <button type="submit">Purchase</button>
         </div>
-        <button type="submit">Purchase</button>
+        )}
       </form>
     </section>
   );

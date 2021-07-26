@@ -4,40 +4,41 @@ export namespace CartService {
   let cart = Storage.getItem(Storage.keys.cart) || [];
   let listeners = [];
 
-  export const syncWithLS = () => {
+  const updateCart = (newCartData) => {
+    cart = newCartData;
     listeners.forEach((listener) => listener(cart));
     Storage.setItem(Storage.keys.cart, cart);
-    return Promise.resolve(cart);
+    Promise.resolve(cart);
   };
   export const addItem = (product) => {
-    const cartProducts = cart.some((item) => item.id === product.id);
-    if (cartProducts) {
+    const hasCartProduct = cart.find((item) => item.id === product.id);
+    if (hasCartProduct) {
       cart.map((item) => {
         if (item.id === product.id) {
           if (item.quantity) {
-            item.quantity = Number(item.quantity + 1);
+            item.quantity += 1;
           } else {
-            item.quantity = Number(2);
+            item.quantity = 2;
           }
         }
       });
     } else {
       cart.push(product);
     }
-    syncWithLS();
+    updateCart(cart);
   };
 
   export const deleteItem = (id) => {
     const deleteProductFromList = cart.filter((item) => item.id !== id);
     cart = deleteProductFromList;
-    syncWithLS();
+    updateCart(cart);
   };
 
-  export const updateItemsQuantity = (id, value) => cart.map((item) => {
-    if (item.id === id) {
+  export const updateItemsQuantity = (id, value) => cart.find((item) => {
+      if (item.id === id) {
       item.quantity = Number(value);
     }
-    syncWithLS();
+    updateCart(cart);
   });
 
   export const getItems = () => cart;
@@ -50,7 +51,7 @@ export namespace CartService {
   };
 
   export const clearCart = () => {
-    Storage.removeItem(Storage.keys.cart);
+    Storage.setItem(Storage.keys.cart, []);
   };
 
   Storage.watch((key, value) => {
