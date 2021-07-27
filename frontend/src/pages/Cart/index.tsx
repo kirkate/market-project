@@ -4,7 +4,7 @@ import { CartService } from '../../services/cartService';
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
-  const [quantityProducts, setQuantityProducts] = useState(1);
+  const [quantityProducts, setQuantityProducts] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const Cart = () => {
   };
   const handleChangeQuantity = (id, { target: { value } }) => {
     CartService.updateItemsQuantity(id, value);
-    setQuantityProducts(Number(value));
+    setQuantityProducts(value);
   };
   const handleSubmitPurchases = (event) => {
     event.preventDefault();
@@ -54,10 +54,7 @@ export const Cart = () => {
                   onChange={() => handleChangeQuantity(cartItem.id, event)}
                 />
                 <span>
-                  {cartItem.quantity
-                    ? cartItem.price * cartItem.quantity
-                    : cartItem.price}
-                  {' '}
+                  {cartItem.price * cartItem.quantity}
                   $
                 </span>
                 <button
@@ -71,19 +68,18 @@ export const Cart = () => {
           </ul>
         </If>
         {cart && cart.length > 0 && (
-        <div>
-          <button type="button" onClick={handleClearCart}>
-            Clear all
-          </button>
           <div>
-            <p>Total price</p>
-            <span>
-              $
-              {totalPrice}
-            </span>
+            <button type="button" onClick={handleClearCart}>
+              Clear all
+            </button>
+            <div>
+              <p>
+                Total price $
+                {totalPrice}
+              </p>
+            </div>
+            <button type="submit">Purchase</button>
           </div>
-          <button type="submit">Purchase</button>
-        </div>
         )}
       </form>
     </section>

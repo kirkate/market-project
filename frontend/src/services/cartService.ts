@@ -13,16 +13,9 @@ export namespace CartService {
   export const addItem = (product) => {
     const hasCartProduct = cart.find((item) => item.id === product.id);
     if (hasCartProduct) {
-      cart.map((item) => {
-        if (item.id === product.id) {
-          if (item.quantity) {
-            item.quantity += 1;
-          } else {
-            item.quantity = 2;
-          }
-        }
-      });
+      product.quantity += 1;
     } else {
+      product.quantity = 1;
       cart.push(product);
     }
     updateCart(cart);
@@ -35,7 +28,7 @@ export namespace CartService {
   };
 
   export const updateItemsQuantity = (id, value) => cart.find((item) => {
-      if (item.id === id) {
+    if (item.id === id) {
       item.quantity = Number(value);
     }
     updateCart(cart);

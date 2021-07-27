@@ -20,9 +20,7 @@ export const Categories = ({ onSubCategoryClick }) => {
   }, []);
 
   useEffect(() => {
-    getCategoryData(activeIdCategory).then((data) => {
-      data && setSubCategories(data);
-    });
+    getCategoryData(activeIdCategory).then((data) => data && setSubCategories(data));
   }, [params]);
 
   function handleCategoryClick(categoryId, event) {

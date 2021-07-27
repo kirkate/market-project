@@ -12,9 +12,7 @@ export const Products = ({ activeSubIdCategory }) => {
   };
 
   useEffect(() => {
-    getProductsData(activeSubIdCategory).then((data) => {
-      data && setProducts(data.products);
-    });
+    getProductsData(activeSubIdCategory).then((data) => data && setProducts(data.products));
   }, [activeSubIdCategory]);
 
   return (
