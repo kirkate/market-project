@@ -3,9 +3,9 @@ import {
   Route, useHistory, useLocation, Switch,
 } from 'react-router-dom';
 import { useEffect, useState } from 'preact/hooks';
-import { Container } from '../../components/Container/index';
-import { Categories } from '../../components/Categories/index';
-import { Products } from '../../components/Products/index';
+import { Container } from '../../components/Container';
+import { Categories } from '../../components/Categories';
+import { Products } from '../../components/Products';
 
 export const Store = () => {
   const history = useHistory();
@@ -30,16 +30,16 @@ export const Store = () => {
       <section class="store">
         <Switch>
           <Route
+            path="/store/:categorySlug/:subCategorySlug"
+            render={() => (
+              <Products activeSubIdCategory={activeSubIdCategory} />
+            )}
+          />
+          <Route
             path="/store/:categorySlug"
             exact
             render={() => (
               <Categories onSubCategoryClick={handleSubCategoryClick} />
-            )}
-          />
-          <Route
-            path="/store/:categorySlug/:subCategorySlug"
-            render={() => (
-              <Products activeSubIdCategory={activeSubIdCategory} />
             )}
           />
         </Switch>

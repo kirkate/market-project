@@ -1,7 +1,7 @@
-import { h } from 'preact';
+import { h } from "preact";
 
-export const Button = ({ children, className, onClick }) => (
-  <button class={className} type="button" onClick={onClick}>
+export const Button = ({ children, className, onClick, type }) => (
+  <button class={className} type={type} onClick={onClick}>
     {children}
   </button>
 );

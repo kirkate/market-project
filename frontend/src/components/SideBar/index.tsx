@@ -1,5 +1,4 @@
 import { h } from 'preact';
-// import { NavLink } from 'react-router-dom';
 
 export const SideBar = ({ categories, onCategoryClick }) => (
   <aside class="sidebar">
