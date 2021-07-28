@@ -1,87 +1,22 @@
-import { h } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
-import { CartService } from '../../services/cartService';
+import { h } from "preact";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "preact/hooks";
+import { CartService } from "../../services/cartService";
+import { CartTable } from "../../components/CartTable";
+import { routes } from "../../constants/routes";
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
-  const [quantityProducts, setQuantityProducts] = useState(null);
-  const [totalPrice, setTotalPrice] = useState(0);
-
   useEffect(() => {
     CartService.watch(setCart);
   }, []);
-
-  useEffect(() => {
-    setTotalPrice(
-      cart.reduce((sum, i) => sum + i.price * (i.quantity || 1), 0),
-    );
-  }, [cart.length, quantityProducts]);
-
-  const handleDeleteProduct = (id) => {
-    CartService.deleteItem(id);
-  };
-  const handleClearCart = () => {
-    CartService.clearCart();
-  };
-  const handleChangeQuantity = (id, { target: { value } }) => {
-    CartService.updateItemsQuantity(id, value);
-    setQuantityProducts(value);
-  };
-  const handleSubmitPurchases = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <section>
-      <p>
-        Cart (
-        {cart.length}
-        )
-      </p>
-      <form onSubmit={handleSubmitPurchases}>
-        <If condition={cart}>
-          <ul class="cartList">
-            <For each="cartItem" of={cart}>
-              <li key={index} class="cartItem">
-                <p>{cartItem.title}</p>
-                <input
-                  id="count"
-                  type="number"
-                  class="cart-form__input"
-                  value={cartItem.quantity || 1}
-                  min={1}
-                  max={100}
-                  onChange={() => handleChangeQuantity(cartItem.id, event)}
-                />
-                <span>
-                  {cartItem.price * cartItem.quantity}
-                  $
-                </span>
-                <button
-                  type="button"
-                  onClick={() => handleDeleteProduct(cartItem.id)}
-                >
-                  delete
-                </button>
-              </li>
-            </For>
-          </ul>
-        </If>
-        {cart && cart.length > 0 && (
-          <div>
-            <button type="button" onClick={handleClearCart}>
-              Clear all
-            </button>
-            <div>
-              <p>
-                Total price $
-                {totalPrice}
-              </p>
-            </div>
-            <button type="submit">Purchase</button>
-          </div>
-        )}
-      </form>
+      <p>Cart ({cart.positions.length})</p>
+      <CartTable cart={cart} />
+      <If condition={cart.positions?.length > 0}>
+        <Link to={routes.checkout}>Purchase</Link>
+      </If>
     </section>
   );
 };
