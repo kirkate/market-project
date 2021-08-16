@@ -1,6 +1,6 @@
 export namespace Storage {
   let listeners = [];
-  export const keys = { cart: 'cart', reset: null };
+  export const keys = { cart: 'cart' };
   export const getItem = (key) => JSON.parse(localStorage.getItem(key));
 
   export const setItem = (key, value) => {

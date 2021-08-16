@@ -1,0 +1,13 @@
+.deliveryForm {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  padding: 30px;
+
+  button {
+    position: absolute;
+    bottom: 0;
+  }
+}
