@@ -4,7 +4,6 @@ import { Button } from '../Button';
 import { getProductsData } from '../../services/api';
 import { CartService } from '../../services/cartService';
 
-declare const product;
 export const Products = ({ activeSubIdCategory }) => {
   const [products, setProducts] = useState(null);
 
