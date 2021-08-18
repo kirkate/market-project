@@ -1,13 +1,12 @@
 import { h } from 'preact';
 import { useFormContext } from './context';
 
-export const RadioGroup = ({ children, name }) => {
+export const RadioGroup = ({ children, name, value }) => {
   const {
-    errors, handleChange, values,
+    errors, handleChange,
   } = useFormContext();
-
   return (
-    <fieldset onChange={handleChange} currentValue={values[name]}>
+    <fieldset onChange={handleChange} value={value}>
       {children}
       <If condition={errors[name]}>
         <div>{errors[name].message}</div>

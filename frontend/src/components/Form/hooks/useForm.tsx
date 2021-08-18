@@ -12,13 +12,10 @@ export const useForm = ({
   const [values, setValues] = useState(initialValues || {});
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [currentValue, setCurrentValue] = useState('');
 
   const handleChange = useCallback((event) => {
     const { target } = event;
-    const { name, value, defaultValue } = target;
-    if (defaultValue) setCurrentValue(value);
-
+    const { name, value } = target;
     setValues((currentValues) => ({ ...currentValues, [name]: value }));
     setErrors((currentErrors) => ({
       ...currentErrors,
@@ -31,9 +28,6 @@ export const useForm = ({
     const errorCheck = ValidationUtil.validate(values, validations);
     setErrors(errorCheck);
     setIsSubmitted(true);
-    if (isSubmitted) {
-      console.log('>>> SUBMIT ', values);
-    }
   }, [values]);
 
   useEffect(() => {
@@ -46,6 +40,5 @@ export const useForm = ({
     errors,
     handleChange,
     handleSubmit,
-    currentValue,
   };
 };

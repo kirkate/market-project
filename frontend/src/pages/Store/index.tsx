@@ -2,7 +2,7 @@ import { h } from 'preact';
 import {
   Route, useHistory, useLocation, Switch,
 } from 'react-router-dom';
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useState, useCallback } from 'preact/hooks';
 import { Container } from '../../components/Container';
 import { Categories } from '../../components/Categories';
 import { Products } from '../../components/Products';
@@ -18,12 +18,12 @@ export const Store = () => {
   }, []);
 
   const [activeSubIdCategory, setActiveSubIdCategory] = useState(null);
-  function handleSubCategoryClick(subCategoryId, event) {
+  const handleSubCategoryClick = useCallback((subCategoryId, event) => {
     event.preventDefault();
 
     history.push(`${location.pathname}/${subCategoryId}`);
     setActiveSubIdCategory(subCategoryId);
-  }
+  }, []);
 
   return (
     <Container>
