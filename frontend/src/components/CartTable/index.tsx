@@ -1,6 +1,6 @@
-import { h } from "preact";
-import { CartService } from "../../services/cartService";
-import { Button } from "../Button";
+import { h } from 'preact';
+import { CartService } from '../../services/cartService';
+import { Button } from '../Button';
 
 export const CartTable = ({ cart }) => {
   const handleDeleteProduct = (id) => {
@@ -25,11 +25,12 @@ export const CartTable = ({ cart }) => {
                 value={position.quantity || 1}
                 min={1}
                 max={100}
-                onChange={() =>
-                  handleChangeQuantity(position.product.id, event.target.value)
-                }
+                onChange={() => handleChangeQuantity(position.product.id, event.target.value)}
               />
-              <span>{position.total}$</span>
+              <span>
+                {position.total}
+                $
+              </span>
               <Button
                 type="button"
                 onClick={() => handleDeleteProduct(position.product.id)}
@@ -40,7 +41,10 @@ export const CartTable = ({ cart }) => {
           </For>
         </ul>
         <If condition={cart.positions?.length > 0}>
-          <p>Total price ${cart.total}</p>
+          <p>
+            Total price $
+            {cart.total}
+          </p>
         </If>
       </If>
     </form>

@@ -1,0 +1,40 @@
+.checkoutPage {
+  display: flex;
+  padding: 40px;
+
+  .deliveryForm {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 30px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .checkoutList {
+    width: 300px;
+  }
+
+  .productsList {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      display: flex;
+      justify-content: space-around;
+
+      p {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
