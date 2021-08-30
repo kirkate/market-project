@@ -1,0 +1,21 @@
+.product__details {
+  margin: 0 auto;
+}
+
+.product__block {
+  display: flex;
+figure {
+    margin: 0;
+}
+
+img {
+    width: 300px;
+}
+
+  div {
+    padding: 40px;
+  }
+}
+
+
+

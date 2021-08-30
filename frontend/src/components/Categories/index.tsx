@@ -1,45 +1,45 @@
 import { h } from 'preact';
-
-import { useEffect, useState } from 'preact/hooks';
-import { useParams, useHistory } from 'react-router-dom';
+import { useCallback, useEffect, useState } from 'preact/hooks';
+import { useParams, useHistory, useLocation } from 'react-router-dom';
 import { SideBar } from '../SideBar';
-import { getCategoryData, getCaterogiesData } from '../../services/api';
+import { getCategoriesListData, getCategoryData } from '../../services/api';
+import slugMap from '../../services/slugMap.json';
 
-export const Categories = ({ onSubCategoryClick }) => {
+export const Categories = () => {
   const params = useParams();
   const history = useHistory();
-
+  const location = useLocation();
   const [categories, setCategories] = useState(null);
-  const [activeIdCategory, setActiveIdCategory] = useState('1');
   const [subCategories, setSubCategories] = useState(null);
 
   useEffect(() => {
-    getCaterogiesData().then((result) => {
-      setCategories(result);
-    });
+    getCategoriesListData().then((result) => setCategories(result));
   }, []);
 
   useEffect(() => {
-    getCategoryData(activeIdCategory).then((data) => data && setSubCategories(data));
-  }, [params]);
+    const categoryID = slugMap.categories[params.categorySlug];
+    getCategoryData(categoryID).then((result) => setSubCategories(result.products));
+  }, [location.pathname]);
 
-  function handleCategoryClick(categoryId, event) {
+  const handleSubCategoryClick = useCallback((subCategorySlug, event) => {
     event.preventDefault();
-    const category = categories.find((item) => item.id === categoryId);
-    history.replace(category.slug);
-    setActiveIdCategory(categoryId);
-  }
-
+    history.push(`${location.pathname}/${subCategorySlug}`);
+  }, [location.pathname]);
   return (
     <div class="filter-categories">
-      <SideBar categories={categories} onCategoryClick={handleCategoryClick} />
+      <SideBar categories={categories} />
       <If condition={subCategories}>
         <ul class="subCategories">
           <For each="subCategory" of={subCategories}>
             <li key={subCategory.id} class="subCategory">
+              <figure class="subCategory-image">
+                <img
+                  src={subCategory.imageUrl}
+                />
+              </figure>
               <a
                 href={`/store/${params.categorySlug}/${subCategory.id}`}
-                onClick={onSubCategoryClick.bind(null, subCategory.id)}
+                onClick={handleSubCategoryClick.bind(null, subCategory.slug)}
               >
                 {subCategory.title}
               </a>

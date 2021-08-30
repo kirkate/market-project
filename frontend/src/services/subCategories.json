@@ -1,0 +1,65 @@
+[
+  {
+    "id": "12",
+   "slug" : "iphone-12",
+    "imageUrl": "../images/iphone-12.png",
+    "products": [
+      {
+        "id": "112",
+        "title": "iPhone 12 128 GB",
+        "slug": "iphone-12-128gb-gold",
+        "price": "700",
+        "imageUrl": "../../images/iphone-12.png"
+      },
+      {
+        "id": "111",
+        "title": "iPhone 12 64 GB",
+        "slug": "iphone-12-64gb-space-grey",
+        "price": "800",
+        "imageUrl": "../../images/iphone-12.png"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "slug" : "iphone-11",
+    "imageUrl": "../images/iphone-12.png",
+    "products": [
+      {
+        "id": "115",
+        "title": "iPhone 11 128 GB",
+        "slug": "iphone-11-128gb-black",
+        "price": "400",
+        "imageUrl": "../images/iphone-12.png"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "slug" : "iphone-10",
+    "imageUrl": "../images/iphone-12.png",
+    "products": [
+      {
+        "id": "114",
+        "slug": "iphone-10-128gb-white",
+        "title": "iPhone X 128 GB",
+        "price": "400",
+        "imageUrl": "../images/iphone-12.png"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "slug" : "iphone-12-pro",
+    "imageUrl": "../images/iphone-12.png",
+    "products": [
+      {
+        "id": "113",
+        "slug": "iphone-12-pro-64gb-red",
+        "title": "iPhone 12 pro 64 GB",
+        "price": "400",
+        "imageUrl": "../images/iphone-12.png"
+      }
+    ]
+  }
+]

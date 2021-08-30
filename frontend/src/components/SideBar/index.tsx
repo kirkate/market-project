@@ -1,17 +1,15 @@
 import { h } from 'preact';
+import { Link } from 'react-router-dom';
 
-export const SideBar = ({ categories, onCategoryClick }) => (
+export const SideBar = ({ categories }) => (
   <aside class="sidebar">
     <If condition={categories}>
       <ul class="categories">
         <For each="category" of={categories}>
           <li key={category.id} class="category">
-            <a
-              href={`/store/${category.slug}`}
-              onClick={onCategoryClick.bind(null, category.id)}
-            >
+            <Link replace to={`/store/${category.slug}`}>
               {category.title}
-            </a>
+            </Link>
           </li>
         </For>
       </ul>

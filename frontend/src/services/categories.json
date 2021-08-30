@@ -1,0 +1,64 @@
+ [
+    {
+      "id": "1",
+      "slug": "iphone",
+      "title": "iPhone",
+      "products": [
+        {
+          "id": "11",
+          "title": "iPhone 12",
+          "imageUrl": "../images/iphone-12.png",
+          "slug": "iphone-12",
+          "priceRange": {
+            "from": "600",
+            "to": "800"
+          }
+        },
+        {
+          "id": "12",
+          "title": "iPhone 11",
+          "imageUrl": "../images/iphone-12.png",
+          "slug": "iphone-11",
+          "priceRange": {
+            "from": "400",
+            "to": "700"
+          }
+        },
+        {
+          "id": "14",
+          "title": "iPhone X",
+          "imageUrl": "../images/iphone-12.png",
+          "slug": "iphone-10",
+          "priceRange": {
+            "from": "200",
+            "to": "500"
+          }
+        },
+        {
+          "id": "13",
+          "title": "iPhone 12 pro",
+          "imageUrl": "../images/iphone-12.png",
+          "slug": "iphone-12-pro",
+          "priceRange": {
+            "from": "1200",
+            "to": "1500"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "slug": "samsung",
+      "title": "Samsung"
+    },
+    {
+      "id": "3",
+      "slug": "ipad",
+      "title": "iPad"
+    },
+    {
+      "id": "4",
+      "slug": "nokia",
+      "title": "Nokia"
+    }
+  ]

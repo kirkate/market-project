@@ -3,7 +3,7 @@ export const routes = {
   store: '/store',
   categories: '/store/:categorySlug',
   products: '/store/:categorySlug/:subCategorySlug',
-  product: '/product/:productSlug',
+  product: '/products/:productSlug',
   checkout: '/checkout',
   cart: '/cart',
 };
