@@ -21,7 +21,7 @@ export const Products = () => {
     <If condition={products}>
       <ul class="products">
         <For each="product" of={products}>
-          <li key={product.id} class="products__product">
+          <li key={product.id}>
             <figure>
               <img
                 src={product.imageUrl}

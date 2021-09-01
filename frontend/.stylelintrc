@@ -6,7 +6,7 @@
   "rules": {
     "indentation": 2,
     "string-quotes": "single",
-    "rule-empty-line-before": "never",
+    "rule-empty-line-before": "always",
     "media-feature-range-operator-space-before": "never",
     "media-feature-range-operator-space-after": "never",
     "media-feature-colon-space-before": "never",

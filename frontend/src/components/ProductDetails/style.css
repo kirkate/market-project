@@ -1,14 +1,18 @@
-.product__details {
+.product {
   margin: 0 auto;
 }
-.product__block {
+
+.product__details{
   display: flex;
+
   figure {
     margin: 0;
   }
+
   img {
     width: 300px;
   }
+
   div {
     padding: 40px;
   }

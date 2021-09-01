@@ -1,18 +1,18 @@
 import { h } from 'preact';
 
 export const ProductDetails = ({ product }) => (
-  <div class="product__details">
+  <div class="product">
     <h1>{product.title}</h1>
-    <div className="product__block">
+    <div className="product__details">
       <figure>
         <img alt="" src={product.imageUrl} />
       </figure>
-      <div class="product__feature-block">
-        <p className="description">
+      <div class="product__details-description">
+        <p>
           {product.description}
         </p>
         <If condition={product.attributes}>
-          <ul class="attributes">
+          <ul>
             <For each="attribute" of={product.attributes}>
               <li>
                 <p>
