@@ -10,7 +10,7 @@ import { ConditionalSection } from '../Form/ConditionalSection';
 
 export const CheckoutForm = () => (
 
-  <Form initialValues={initialValues} validations={validations} class="deliveryForm">
+  <Form initialValues={initialValues} validations={validations} class="delivery-form">
     <Fieldset label="First name" name="firstname">
       <input name="firstname" type="text" />
     </Fieldset>

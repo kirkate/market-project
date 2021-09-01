@@ -7,9 +7,19 @@ import { routes } from '../../constants/routes';
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
+
   useEffect(() => {
     CartService.watch(setCart);
   }, []);
+
+  const handleDeleteProduct = (id) => {
+    CartService.deleteItem(id);
+  };
+
+  const handleChangeQuantity = (id, value) => {
+    CartService.updateItemsQuantity(id, value);
+  };
+
   return (
     <section>
       <p>
@@ -17,7 +27,7 @@ export const Cart = () => {
         {cart.positions.length}
         )
       </p>
-      <CartTable cart={cart} />
+      <CartTable cart={cart} onDelete={handleDeleteProduct} onQuantityChange={handleChangeQuantity} />
       <If condition={cart.positions?.length > 0}>
         <Link to={routes.checkout}>Purchase</Link>
       </If>

@@ -1,6 +1,5 @@
 .banner {
   position: relative;
-
   height: calc(100vh - var(--header-height));
 
   .slide {
@@ -9,9 +8,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-
     margin: 0;
-
     transition: opacity 500ms ease-in-out;
 
     &:not(.active) {
@@ -27,19 +24,16 @@
   .banner-dots {
     position: absolute;
     left: 50%;
-
     display: flex;
     justify-content: space-between;
     width: 200px;
     margin-top: 10px;
-
     transform: translateX(-50%);
   }
 
   .banner-dot {
     width: 4px;
     height: 4px;
-
     background-color: transparent;
     border: 2px solid var(--color-white);
     border-radius: 50%;

@@ -6,6 +6,7 @@
   "engines": {
     "node": ">=14"
   },
+
   "scripts": {
     "analyze": "yarn build --analyze",
     "start": "webpack serve --open --mode development",
