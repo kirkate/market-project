@@ -6,7 +6,6 @@ import { Home } from './pages/Home';
 import { Cart } from './pages/Cart';
 import { Checkout } from './pages/Checkout';
 import { NotFound } from './pages/NotFound';
-import { Store } from './pages/Store';
 import { routes } from './constants/routes';
 import { Header } from './components/Header';
 import { Product } from './pages/Product';
@@ -14,7 +13,6 @@ import { Products } from './components/Products';
 import { Categories } from './components/Categories';
 
 export const App = () => (
-
   <Router basename="/">
     <Header />
     <Switch>

@@ -2,7 +2,9 @@ import categories from './categories.json';
 import products from './products.json';
 import bannerImages from './bannerImages.json';
 import subCategoies from './subCategories.json';
+import slugMap from './slugMap.json';
 
+export const getIdBySlug = (slug, type) => slugMap[type][slug];
 export const getBannerData = () => new Promise((resolve) => {
   resolve(bannerImages);
 });

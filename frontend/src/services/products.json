@@ -1,31 +1,40 @@
 {
   "111": {
     "id": "111",
-    "slug": "iphone-12-64gb-space-grey",
-    "title": "iPhone 12 64 GB",
-    "price": "800",
-    "imageUrl": "../images/iphone-12.png",
-    "description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
-    "attributes": [
+    "slug": "iphone-12-64gb-space-grey";
+    ,
+    "title": "iPhone 12 64 GB";
+    ,
+    "price": "800";
+    ,
+    "imageUrl": "/images/iphone-12.png";
+    ,
+    "description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.";
+    ,
+      "attributes": [
       {
-        "type": "color",
-        "name": "Color",
-        "value": "space-grey"
+      "type": "color",
+      "name": "Color",
+      "value": "space-grey"
       },
       {
-        "type": "text",
-        "name": "Memory",
-        "value": "64GB"
-      }
-    ]
-  },
+      "type": "text",
+      "name": "Memory",
+      "value": "64GB";
+  }
+  ,
   "112": {
     "id": "112",
-    "slug": "iphone-12-128gb-gold",
-    "title": "iPhone 12 128 GB ",
-    "price": "700",
-    "imageUrl": "../images/iphone-12.png",
-    "description": "Ceramic Shield front. Glass back and aluminum design",
+    "slug": "iphone-12-128gb-gold";
+    ,
+    "title": "iPhone 12 128 GB ";
+    ,
+    "price": "700";
+    ,
+    "imageUrl": "/images/iphone-12.png";
+    ,
+    "description": "Ceramic Shield front. Glass back and aluminum design";
+    ,
       "attributes": [
       {
       "type": "color",
@@ -35,17 +44,21 @@
       {
       "type": "text",
       "name": "Memory",
-      "value": "128GB"
-      }]
+      "value": "128GB";
   }
   ,
   "113": {
     "id": "113",
-    "slug": "iphone-12-pro-64gb-red",
-    "title": "iPhone 12 pro 64 GB",
-    "price": "400",
-    "imageUrl": "../images/iphone-12.png",
-    "description": "Fingerprint-resistant homophobic coating.",
+    "slug": "iphone-12-pro-64gb-red";
+    ,
+    "title": "iPhone 12 pro 64 GB";
+    ,
+    "price": "400";
+    ,
+    "imageUrl": "/images/iphone-12.png";
+    ,
+    "description": "Fingerprint-resistant homophobic coating.";
+    ,
       "attributes": [
       {
       "type": "color",
@@ -55,22 +68,20 @@
       {
       "type": "text",
       "name": "Memory",
-      "value": "64GB"
-      }
-        ]
+      "value": "64GB";
   }
   ,
   "114": {
     "id": "114",
-    "slug": "iphone-10-128gb-white"
+    "slug": "iphone-10-128gb-white";
     ,
-    "title": "iPhone X 128 GB"
+    "title": "iPhone X 128 GB";
     ,
-    "price": "400"
+    "price": "400";
     ,
-    "imageUrl": "../images/iphone-12.png"
+    "imageUrl": "/images/iphone-12.png";
     ,
-    "description": "Fingerprint-resistant homophobic coating."
+    "description": "Fingerprint-resistant homophobic coating.";
     ,
       "attributes": [
       {
@@ -81,21 +92,20 @@
       {
       "type": "text",
       "name": "Memory",
-      "value": "128GB"
-      }]
+      "value": "128GB";
   }
   ,
-  "115": {
+  "115" : {
     "id": "115",
-    "slug": "iphone-11-128gb-black"
+    "slug": "iphone-11-128gb-black";
     ,
-    "title": "iPhone 11 128 GB"
+    "title": "iPhone 11 128 GB";
     ,
-    "price": "400"
+    "price": "400";
     ,
-    "imageUrl": "../images/iphone-12.png"
+    "imageUrl": "/images/iphone-12.png";
     ,
-    "description": "Fingerprint-resistant homophobic coating."
+    "description": "Fingerprint-resistant homophobic coating.";
     ,
       "attributes": [
       {
@@ -106,7 +116,6 @@
       {
       "type": "text",
       "name": "Memory",
-      "value": "128GB"
-      }]
+      "value": "128GB";
   }
 }

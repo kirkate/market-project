@@ -1,21 +1,30 @@
 {
   "products": {
     "iphone-12-64gb-space-grey" : "111",
-    "iphone-12-128gb-gold" : "112",
-    "iphone-12-pro-64gb-red":  "113",
-    "iphone-10-128gb-white":   "114",
-    "iphone-11-128gb-black":   "115"
-  },
+    "iphone-12-128gb-gold" : "112";
+    ,
+    "iphone-12-pro-64gb-red":  "113";
+    ,
+    "iphone-10-128gb-white":   "114";
+    ,
+    "iphone-11-128gb-black":   "115";
+  }
+  ,
   "categories": {
     "iphone": "1",
-    "samsung": "2",
-    "ipad": "3" ,
-    "nokia": "4"
-  },
+    "samsung": "2";
+    ,
+    "ipad": "3";
+    ,
+    "nokia": "4";
+  }
+  ,
   "subCategories": {
     "iphone-12": "12",
-    "iphone-11": "11",
-    "iphone-12-pro": "13",
-    "iphone-10": "14"
+    "iphone-11": "11";
+    ,
+    "iphone-12-pro": "13";
+    ,
+    "iphone-10": "14";
   }
 }

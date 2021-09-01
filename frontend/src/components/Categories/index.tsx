@@ -2,8 +2,7 @@ import { h } from 'preact';
 import { useCallback, useEffect, useState } from 'preact/hooks';
 import { useParams, useHistory, useLocation } from 'react-router-dom';
 import { SideBar } from '../SideBar';
-import { getCategoriesListData, getCategoryData } from '../../services/api';
-import slugMap from '../../services/slugMap.json';
+import { getCategoriesListData, getCategoryData, getIdBySlug } from '../../services/api';
 
 export const Categories = () => {
   const params = useParams();
@@ -17,8 +16,9 @@ export const Categories = () => {
   }, []);
 
   useEffect(() => {
-    const categoryID = slugMap.categories[params.categorySlug];
-    getCategoryData(categoryID).then((result) => setSubCategories(result.products));
+    console.log('params', params);
+    const categoryID = getIdBySlug(params.categorySlug, 'categories');
+    getCategoryData(categoryID).then((result) => result && setSubCategories(result.products));
   }, [location.pathname]);
 
   const handleSubCategoryClick = useCallback((subCategorySlug, event) => {
@@ -29,10 +29,10 @@ export const Categories = () => {
     <div class="filter-categories">
       <SideBar categories={categories} />
       <If condition={subCategories}>
-        <ul class="subCategories">
+        <ul class="sub-categories">
           <For each="subCategory" of={subCategories}>
-            <li key={subCategory.id} class="subCategory">
-              <figure class="subCategory-image">
+            <li key={subCategory.id} class="sub-category">
+              <figure>
                 <img
                   src={subCategory.imageUrl}
                 />

@@ -4,14 +4,14 @@ import { Button } from '../Button';
 export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
   <form>
     <If condition={cart.positions}>
-      <ul class="cartList">
+      <ul class="cart-list">
         <For each="position" of={cart.positions}>
-          <li key={index} class="position">
+          <li key={index}>
             <p>{position.product.title}</p>
             <input
               name="productsQuantity"
               type="number"
-              class="cart-form__input"
+              class="cart-list__input"
               value={position.quantity || 1}
               min={1}
               max={100}

@@ -7,7 +7,7 @@
         {
           "id": "11",
           "title": "iPhone 12",
-          "imageUrl": "../images/iphone-12.png",
+          "imageUrl": "/images/iphone-12.png",
           "slug": "iphone-12",
           "priceRange": {
             "from": "600",
@@ -17,7 +17,7 @@
         {
           "id": "12",
           "title": "iPhone 11",
-          "imageUrl": "../images/iphone-12.png",
+          "imageUrl": "/images/iphone-12.png",
           "slug": "iphone-11",
           "priceRange": {
             "from": "400",
@@ -27,7 +27,7 @@
         {
           "id": "14",
           "title": "iPhone X",
-          "imageUrl": "../images/iphone-12.png",
+          "imageUrl": "/images/iphone-12.png",
           "slug": "iphone-10",
           "priceRange": {
             "from": "200",
@@ -37,7 +37,7 @@
         {
           "id": "13",
           "title": "iPhone 12 pro",
-          "imageUrl": "../images/iphone-12.png",
+          "imageUrl": "/images/iphone-12.png",
           "slug": "iphone-12-pro",
           "priceRange": {
             "from": "1200",

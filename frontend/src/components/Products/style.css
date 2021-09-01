@@ -1,12 +1,10 @@
 .products {
   display: flex;
-
   list-style: none;
 
-  .product {
+  .products__product {
     width: 100px;
     padding: 15px;
-
     text-align: center;
 
     figure {

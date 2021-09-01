@@ -1,12 +1,10 @@
 import { h } from 'preact';
-import { useState } from 'preact/hooks';
-import { CartService } from '../../services/cartService';
 
-export const ProductsList = ({ productList }) => (
-  <aside class="checkoutList">
-    <ul class="productsList">
+export const CheckoutList = ({ productList }) => (
+  <aside class="checkout-list">
+    <ul>
       <For each="position" of={productList.positions}>
-        <li key={index} class="productItem">
+        <li key={index}>
           <p>{position.product.title}</p>
           <p>{position.quantity}</p>
           <p>
