@@ -16,7 +16,6 @@ export const Categories = () => {
   }, []);
 
   useEffect(() => {
-    console.log('params', params);
     const categoryID = getIdBySlug(params.categorySlug, 'categories');
     getCategoryData(categoryID).then((result) => result && setSubCategories(result.products));
   }, [location.pathname]);

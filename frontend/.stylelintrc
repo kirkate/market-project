@@ -4,7 +4,13 @@
     "stylelint-config-rational-order"
   ],
   "rules": {
-    "declaration-empty-line-before": null,
+    "indentation": 2,
+    "string-quotes": "single",
+    "rule-empty-line-before": "never",
+    "media-feature-range-operator-space-before": "never",
+    "media-feature-range-operator-space-after": "never",
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "never",
     "plugin/rational-order": [true, {
       "border-in-box-model": false,
       "empty-line-between-groups": true
