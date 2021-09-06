@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-around;
   margin-left: 50px;
-  font-weight: var(--font-weight-bold);
   font-size: 14px;
   text-decoration: none;
   list-style: none;
@@ -17,6 +16,7 @@
     height: 200px;
     margin-right: 10px;
     text-align: center;
+    font-weight: var(--font-weight-bold);
     border: var(--border-transparent);
 
     a {
