@@ -9,7 +9,12 @@
     margin-bottom: 10px;
   }
 
+  address {
+    margin: 20px;
+  }
+
   .checkout-form__radio-group {
+    margin: 15px;
 
     .checkout-form__radio-group-button {
       margin-left: 5px;

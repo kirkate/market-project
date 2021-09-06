@@ -7,22 +7,22 @@ import { Fieldset } from '../Form/Fieldset';
 import { RadioGroup } from '../Form/FieldsetRadio';
 import { RadioButton } from '../Form/RadioButton';
 import { ConditionalSection } from '../Form/ConditionalSection';
-import { Button } from '../Button/index';
+import {Button } from '../Button/index';
 
 export const CheckoutForm = () => (
   <Form initialValues={initialValues} validations={validations} class="checkout-form">
-    <Fieldset label="First name" name="firstname">
+    <Fieldset label="First name" name="firstname" >
       <input name="firstname" type="text" />
     </Fieldset>
     <Fieldset label="Phone" name="phone">
       <input name="phone" type="tel" />
     </Fieldset>
-    <RadioGroup name="deliveryType" class="checkout-form__radio-group">
-      <RadioButton class="checkout-form__radio-group-button" name="deliveryType" value={deliveryType.deliveryByPost}>Delivery by post</RadioButton>
-      <RadioButton class="checkout-form__radio-group-button" name="deliveryType" value={deliveryType.pickupInStore}>Pick Up In-Store</RadioButton>
-      <RadioButton class="checkout-form__radio-group-button" name="deliveryType" value={deliveryType.сourier}>Courier</RadioButton>
+    <RadioGroup name="deliveryType" class='checkout-form__radio-group'>
+      <RadioButton class='checkout-form__radio-group-button' name="deliveryType" value={deliveryType.deliveryByPost}>Delivery by post</RadioButton>
+      <RadioButton class='checkout-form__radio-group-button' name="deliveryType" value={deliveryType.pickupInStore}>Pick Up In-Store</RadioButton>
+      <RadioButton class='checkout-form__radio-group-button'  name="deliveryType" value={deliveryType.сourier}>Courier</RadioButton>
     </RadioGroup>
-    <ConditionalSection name="deliveryType" value={deliveryType.deliveryByPost}>
+    <ConditionalSection  name="deliveryType" value={deliveryType.deliveryByPost}>
       <Fieldset label="City" name="city">
         <input name="city" type="text" />
       </Fieldset>
@@ -34,9 +34,9 @@ export const CheckoutForm = () => (
       <address>Address: Antonovycha St, 176, Kyiv, 03150</address>
     </ConditionalSection>
     <ConditionalSection name="deliveryType" value={deliveryType.сourier}>
-      <RadioGroup name="сourierType">
-        <RadioButton name="сourierType" value={сourierType.express}>Express</RadioButton>
-        <RadioButton name="сourierType" value={сourierType.standard}>Standard</RadioButton>
+      <RadioGroup class='checkout-form__radio-group' name="сourierType">
+        <RadioButton  class='checkout-form__radio-group-button' name="сourierType" value={сourierType.express}>Express</RadioButton>
+        <RadioButton  class='checkout-form__radio-group-button' name="сourierType" value={сourierType.standard}>Standard</RadioButton>
       </RadioGroup>
     </ConditionalSection>
     <Fieldset label="Description" name="description">
