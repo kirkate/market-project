@@ -1,13 +1,14 @@
 .cart {
 
   .cart__link {
-    padding: 10px;
+    padding: 10px 18px;
     color: var(--color-black);
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
     transition: 0.6s;
+    border-radius: .4rem;
 
     &:hover {
       box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.5em;

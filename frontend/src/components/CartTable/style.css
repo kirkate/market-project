@@ -1,4 +1,7 @@
 .cart-form {
+font-weight: var(--font-weight-bold);
+color: var(--color-black);
+font-size: 14px;
 
   .cart-form__list {
 
