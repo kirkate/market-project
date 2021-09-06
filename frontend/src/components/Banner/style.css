@@ -1,7 +1,5 @@
 .banner {
-  position: absolute;
-  right: 0;
-  left: 0;
+  position: relative;
   height: calc(100vh - var(--header-height));
 
   .slide {
