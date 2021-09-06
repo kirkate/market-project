@@ -2,5 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: var(--header-height);
+  padding: 20px;
+
+  h3 {
+    color: var(--color-black);
+    font-weight: var(--font-weight-bold);
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  a:focus,
+  a:hover,
+  h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }

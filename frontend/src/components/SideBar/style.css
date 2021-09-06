@@ -1,10 +1,17 @@
 .sidebar {
 
   ul {
-    list-style: none;
+    width: 100px;
+    color: var(--color-black);
+    font-weight: var(--font-weight);
+    list-style-type: '+ ';
 
     li {
-      padding: 8px 15px;
+      padding: 8px;
+
+      a {
+        font-size: 14px;
+      }
     }
   }
 }

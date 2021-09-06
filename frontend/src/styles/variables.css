@@ -1,4 +1,9 @@
 :root {
   --header-height: 120px;
   --color-white: #fff;
+  --color-black: #000;
+  --color-red: #f00;
+  --border: 3px solid rgb(0 0 0);
+  --border-transparent: 3px solid rgb(0 0 0 / 3%);
+  --font-weight-bold: 900;
 }

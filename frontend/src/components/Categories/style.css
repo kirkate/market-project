@@ -1,21 +1,41 @@
 .filter-categories {
   display: flex;
+  padding: 50px;
 }
 
 .sub-categories {
   display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  text-decoration: none;
   list-style: none;
 
   li {
-    width: 100px;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
     text-align: center;
+    border: var(--border-transparent);
+
+    a {
+      color: var(--color-black);
+    }
 
     figure {
-      margin: 0;
+      margin-bottom: 10px;
 
       img {
         width: 100px;
+        margin: 0 auto;
       }
     }
+  }
+
+  li:focus,
+  li:hover {
+    border: 3px solid rgb(0 0 0 / 13%);
+    cursor: pointer;
   }
 }

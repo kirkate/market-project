@@ -1,0 +1,17 @@
+.cart {
+
+  .cart__link {
+    padding: 10px;
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
+    transition: 0.6s;
+
+    &:hover {
+      box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.5em;
+      transition: 0.6s;
+    }
+  }
+}

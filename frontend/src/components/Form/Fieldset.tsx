@@ -18,7 +18,7 @@ export function Fieldset({ label, name, children }) {
         })}
       </div>
       <If condition={errors[name]}>
-        <div>{errors[name].message}</div>
+        <div class="validation">{errors[name].message}</div>
       </If>
 
     </fieldset>

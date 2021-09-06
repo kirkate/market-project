@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Button } from '../Button';
 import { getIdBySlug, getProductsData } from '../../services/api';
 import { CartService } from '../../services/cartService';
+import { Container } from '../Container';
 
 export const Products = () => {
   const params = useParams();
@@ -18,26 +19,36 @@ export const Products = () => {
   }, [params.subCategorySlug]);
 
   return (
-    <If condition={products}>
-      <ul class="products">
-        <For each="product" of={products}>
-          <li key={product.id}>
-            <figure>
-              <img
-                src={product.imageUrl}
-              />
-            </figure>
-            <Link product={product} to={`/products/${product.slug}`}>{product.title}</Link>
-            <p>
-              {product.price}
-              $
-            </p>
-            <Button onClick={() => handleAddToCart(product)}>
-              + add to cart
-            </Button>
-          </li>
-        </For>
-      </ul>
-    </If>
+    <Container>
+      <If condition={products}>
+        <ul class="products">
+          <For each="product" of={products}>
+            <li key={product.id} class="products__info">
+              <Link product={product} to={`/products/${product.slug}`}>
+                <figure>
+                  <img
+                    src={product.imageUrl}
+                  />
+                </figure>
+                <div class="products__info-details">
+                  <p>
+                    {product.title}
+                    {' '}
+                  </p>
+                  <p>
+                    {product.price}
+                    $
+                  </p>
+                </div>
+              </Link>
+              <Button class="products__info-button" onClick={() => handleAddToCart(product)}>
+                + add to cart
+              </Button>
+
+            </li>
+          </For>
+        </ul>
+      </If>
+    </Container>
   );
 };

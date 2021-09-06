@@ -1,6 +1,7 @@
 import { h } from 'preact';
+import { Button } from '../Button';
 
-export const ProductDetails = ({ product }) => (
+export const ProductDetails = ({ product, onHandleAddToCart }) => (
   <div class="product">
     <h1>{product.title}</h1>
     <div className="product__details">
@@ -11,28 +12,30 @@ export const ProductDetails = ({ product }) => (
         <p>
           {product.description}
         </p>
-        <If condition={product.attributes}>
-          <ul>
-            <For each="attribute" of={product.attributes}>
-              <li>
-                <p>
-                  {attribute.name}
-                  <span>{attribute.value}</span>
-                </p>
-              </li>
-            </For>
-          </ul>
-        </If>
-      </div>
-      <div>
-        <p>
-          Price:
-          {product.price}
-          <span />
-          $
-        </p>
-        <p>{product.count}</p>
-        <button>Add</button>
+        <div class="description">
+          <If condition={product.attributes}>
+            <ul class="attributies">
+              <For each="attribute" of={product.attributes}>
+                <li>
+                  <p>
+                    {attribute.name}
+                    {' '}
+                    :
+                  </p>
+                  {attribute.type === 'color'
+                    ? <div class="attribute__color" style={{ backgroundColor: `${attribute.value}` }} /> : <span>{`${attribute.value}`}</span>}
+                </li>
+              </For>
+            </ul>
+          </If>
+          <p>
+            Price:
+            {product.price}
+            <span />
+            $
+          </p>
+        </div>
+        <Button onClick={() => onHandleAddToCart(product)}>Add</Button>
       </div>
     </div>
   </div>

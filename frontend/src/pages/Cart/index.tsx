@@ -4,6 +4,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { CartService } from '../../services/cartService';
 import { CartTable } from '../../components/CartTable';
 import { routes } from '../../constants/routes';
+import { Container } from '../../components/Container';
 
 export const Cart = () => {
   const [cart, setCart] = useState(CartService.getItems());
@@ -21,16 +22,13 @@ export const Cart = () => {
   };
 
   return (
-    <section>
-      <p>
-        Cart (
-        {cart.positions.length}
-        )
-      </p>
-      <CartTable cart={cart} onDelete={handleDeleteProduct} onQuantityChange={handleChangeQuantity} />
-      <If condition={cart.positions?.length > 0}>
-        <Link to={routes.checkout}>Purchase</Link>
-      </If>
-    </section>
+    <Container>
+      <section class="cart">
+        <CartTable cart={cart} onDelete={handleDeleteProduct} onQuantityChange={handleChangeQuantity} />
+        <If condition={cart.positions?.length > 0}>
+          <Link class="cart__link" to={routes.checkout}>Purchase</Link>
+        </If>
+      </section>
+    </Container>
   );
 };

@@ -1,19 +1,28 @@
 import { h } from 'preact';
 
 export const CheckoutList = ({ productList }) => (
+
   <aside class="checkout-list">
-    <ul>
+    <table>
       <For each="position" of={productList.positions}>
-        <li key={index}>
-          <p>{position.product.title}</p>
-          <p>{position.quantity}</p>
-          <p>
+        <tr>
+          <td>
+            {' '}
+            {position.product.title}
+            {' '}
+          </td>
+          <td>
+            {' '}
+            {position.quantity}
+          </td>
+          <td>
             {position.total}
             $
-          </p>
-        </li>
+          </td>
+        </tr>
+
       </For>
-    </ul>
+    </table>
     <p>
       Total price $
       {productList.total}

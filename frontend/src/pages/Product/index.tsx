@@ -4,6 +4,8 @@ import { useEffect, useState } from 'preact/hooks';
 import { ProductDetails } from '../../components/ProductDetails';
 import { AccessoriesList } from '../../components/AccessoriesList';
 import { getProduct, getIdBySlug } from '../../services/api';
+import { Container } from '../../components/Container';
+import { CartService } from '../../services/cartService';
 
 export const Product = () => {
   const params = useParams();
@@ -13,11 +15,16 @@ export const Product = () => {
     const productID = getIdBySlug(params.productSlug, 'products');
     getProduct(productID).then((result) => setProductsDetails(result));
   }, []);
+  const handleAddToCart = (product) => {
+    CartService.addItem(product);
+  };
 
   return (
-    <section class="product-page">
-      <ProductDetails product={productDetails} />
-      <AccessoriesList />
-    </section>
+    <Container>
+      <section class="product-page">
+        <ProductDetails product={productDetails} onHandleAddToCart={handleAddToCart} />
+        <AccessoriesList />
+      </section>
+    </Container>
   );
 };

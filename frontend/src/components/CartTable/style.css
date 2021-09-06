@@ -1,0 +1,20 @@
+.cart-form {
+
+  .cart-form__list {
+
+    input {
+      width: 70px;
+    }
+
+    button {
+      color: var(--color-black);
+      background-color: var(--color-white);
+      border: var(--border);
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-black);
+      }
+    }
+  }
+}

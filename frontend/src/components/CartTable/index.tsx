@@ -2,36 +2,55 @@ import { h } from 'preact';
 import { Button } from '../Button';
 
 export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
-  <form>
+  <form class="cart-form">
     <If condition={cart.positions}>
-      <ul class="cart-list">
-        <For each="position" of={cart.positions}>
-          <li key={index}>
-            <p>{position.product.title}</p>
-            <input
-              name="productsQuantity"
-              type="number"
-              class="cart-list__input"
-              value={position.quantity || 1}
-              min={1}
-              max={100}
-              onChange={() => onQuantityChange(position.product.id, event.target.value)}
-            />
-            <span>
-              {position.total}
-              $
-            </span>
-            <Button
-              type="button"
-              onClick={() => onDelete(position.product.id)}
-            >
-              delete
-            </Button>
-          </li>
-        </For>
-      </ul>
+      <table class="cart-form__list">
+        <tbody>
+          <For each="position" of={cart.positions}>
+
+            <tr>
+              <td>
+                {' '}
+                <p>{position.product.title}</p>
+              </td>
+
+              <td>
+                <fieldset>
+                  <input
+                    name="productsQuantity"
+                    type="number"
+                    class="cart-list__input"
+                    value={position.quantity || 1}
+                    min={1}
+                    max={100}
+                    onChange={() => onQuantityChange(position.product.id, event.target.value)}
+                  />
+
+                </fieldset>
+              </td>
+
+              <td>
+                <span>
+                  {position.total}
+                  $
+                </span>
+              </td>
+
+              <td>
+                <Button
+                  type="button"
+                  onClick={() => onDelete(position.product.id)}
+                >
+                  delete
+                </Button>
+              </td>
+            </tr>
+
+          </For>
+        </tbody>
+      </table>
       <If condition={cart.positions?.length > 0}>
-        <p>
+        <p class="cart-form__price">
           Total price $
           {cart.total}
         </p>

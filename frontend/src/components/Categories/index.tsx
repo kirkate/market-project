@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'preact/hooks';
 import { useParams, useHistory, useLocation } from 'react-router-dom';
 import { SideBar } from '../SideBar';
 import { getCategoriesListData, getCategoryData, getIdBySlug } from '../../services/api';
+import { Container } from '../Container';
 
 export const Categories = () => {
   const params = useParams();
@@ -25,27 +26,30 @@ export const Categories = () => {
     history.push(`${location.pathname}/${subCategorySlug}`);
   }, [location.pathname]);
   return (
-    <div class="filter-categories">
-      <SideBar categories={categories} />
-      <If condition={subCategories}>
-        <ul class="sub-categories">
-          <For each="subCategory" of={subCategories}>
-            <li key={subCategory.id} class="sub-category">
-              <figure>
-                <img
-                  src={subCategory.imageUrl}
-                />
-              </figure>
-              <a
-                href={`/store/${params.categorySlug}/${subCategory.id}`}
-                onClick={handleSubCategoryClick.bind(null, subCategory.slug)}
-              >
-                {subCategory.title}
-              </a>
-            </li>
-          </For>
-        </ul>
-      </If>
-    </div>
+    <Container>
+      <div class="filter-categories">
+        <SideBar categories={categories} />
+        <If condition={subCategories}>
+          <ul class="sub-categories">
+            <For each="subCategory" of={subCategories}>
+              <li key={subCategory.id} class="sub-category">
+                <a
+                  href={`/store/${params.categorySlug}/${subCategory.id}`}
+                  onClick={handleSubCategoryClick.bind(null, subCategory.slug)}
+                >
+                  <figure>
+                    <img
+                      src={subCategory.imageUrl}
+                    />
+                  </figure>
+
+                  {subCategory.title}
+                </a>
+              </li>
+            </For>
+          </ul>
+        </If>
+      </div>
+    </Container>
   );
 };

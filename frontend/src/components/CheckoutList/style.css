@@ -1,0 +1,7 @@
+.checkout-list {
+  width: 400px;
+  margin-right: 200px;
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-white);
+}

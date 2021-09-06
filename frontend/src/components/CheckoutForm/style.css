@@ -1,0 +1,29 @@
+.checkout-form {
+  width: 400px;
+  color: var(--color-black);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+
+  fieldset {
+    margin-bottom: 10px;
+  }
+
+  .checkout-form__radio-group {
+
+    .checkout-form__radio-group-button {
+      margin-left: 5px;
+
+      input {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .validation {
+    margin-top: 5px;
+    color: var(--color-red);
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
