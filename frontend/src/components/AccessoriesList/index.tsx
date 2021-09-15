@@ -1,5 +1,5 @@
 import { h } from 'preact';
 
 export const AccessoriesList = () => (
-  <div>AccessoriesList</div>
+  <div class="accessories">AccessoriesList</div>
 );

@@ -1,0 +1,55 @@
+
+.cart-notification__trigger {
+  position: absolute;
+  right: -8%;
+  bottom: 7%;
+  z-index: 2;
+  width: 92px;
+  height: 92px;
+  padding: 10px;
+  background: url('../images/icons/add-cart.svg') no-repeat 0 0;
+  background-position: center;
+  background-size: 55%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 30px rgba(0 0 0 / 0.17);
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  content: '';
+
+  &:hover {
+    box-shadow: 0 10px 50px rgba(0 0 0 / 0.23);
+  }
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    right: -7px;
+    width: 35px;
+    height: 35px;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    line-height: 36px;
+    text-align: center;
+    text-indent: 0;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    box-shadow: 0 10px 50px rgba(0 0 0 / 0.23);
+    content: '+';
+  }
+}
+
+@keyframes fadeInUp {
+
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}

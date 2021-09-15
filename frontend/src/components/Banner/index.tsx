@@ -18,8 +18,8 @@ export const Banner = ({ slides, slideTime }) => {
   return (
     <section class="banner">
       <If condition={slides}>
-        <div>
-          <div class="slides">
+        <div class="banner__content">
+          <div class="banner__content-slides">
             <For each="slide" of={slides} index="slideIndex">
               <figure
                 class={classnames('slide', {
@@ -35,7 +35,7 @@ export const Banner = ({ slides, slideTime }) => {
               </figure>
             </For>
           </div>
-          <div class="banner-dots">
+          <div class="banner__content-banner-dots">
             <For of={slides} index="slideIndex">
               <div
                 class={classnames('banner-dot', {

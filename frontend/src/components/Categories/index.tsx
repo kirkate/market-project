@@ -33,18 +33,34 @@ export const Categories = () => {
           <ul class="sub-categories">
             <For each="subCategory" of={subCategories}>
               <li key={subCategory.id} class="sub-category">
+
+                <figure>
+                  <img
+                    src={subCategory.imageUrl}
+                    alt="phone"
+                  />
+                </figure>
+                <p>
+                  {subCategory.priceRange.from}
+                  {' '}
+                  {' '}
+                  -
+                  {' '}
+                  {' '}
+                  {subCategory.priceRange.to}
+                  {' '}
+                  {' '}
+                  $
+                </p>
+
                 <a
                   href={`/store/${params.categorySlug}/${subCategory.id}`}
                   onClick={handleSubCategoryClick.bind(null, subCategory.slug)}
                 >
-                  <figure>
-                    <img
-                      src={subCategory.imageUrl}
-                    />
-                  </figure>
 
                   {subCategory.title}
                 </a>
+
               </li>
             </For>
           </ul>

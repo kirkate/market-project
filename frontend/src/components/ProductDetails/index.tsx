@@ -1,43 +1,74 @@
 import { h } from 'preact';
+import { Link } from 'react-router-dom';
 import { Button } from '../Button';
+import { routes } from '../../constants/routes';
 
 export const ProductDetails = ({ product, onHandleAddToCart }) => (
   <div class="product">
-    <h1>{product.title}</h1>
-    <div className="product__details">
-      <figure>
-        <img alt="" src={product.imageUrl} />
-      </figure>
-      <div class="product__details-description">
+    <figure>
+      <img src={product.imageUrl} alt="phone" />
+    </figure>
+    <div class="product__description">
+      <div class="product__description-main">
+        <h3>{product.title}</h3>
         <p>
-          {product.description}
+          code :
+          {' '}
+          {' '}
+          {product.code}
         </p>
-        <div class="description">
-          <If condition={product.attributes}>
-            <ul class="attributies">
-              <For each="attribute" of={product.attributes}>
-                <li>
-                  <p>
-                    {attribute.name}
-                    {' '}
-                    :
-                  </p>
-                  {attribute.type === 'color'
-                    ? <div class="attribute__color" style={{ backgroundColor: `${attribute.value}` }} /> : <span>{`${attribute.value}`}</span>}
-                </li>
-              </For>
-            </ul>
-          </If>
-          <p>
-            Price:
-            {product.price}
-            <span />
-            $
+        <If condition={product.availability}>
+          <p class="availability">
+            availability :
+            {' '}
+            {' '}
           </p>
-        </div>
-        <Button onClick={() => onHandleAddToCart(product)}>Add</Button>
+        </If>
+        <If condition={!product.availability}>
+          <p class="unavailability">
+            availability :
+            {' '}
+            {' '}
+          </p>
+        </If>
+
       </div>
+
+      <div class="product__description-info">
+        <If condition={product.attributes}>
+          <ul class="attributies">
+            <For each="attribute" of={product.attributes}>
+              <li>
+                <p>
+                  {attribute.name}
+
+                  :
+                </p>
+                <If condition={attribute.type === 'color'}>
+                  <div className="attribute__color" style={{ backgroundColor: `${attribute.value}` }} />
+                </If>
+                <If condition={attribute.type !== 'color'}>
+                  <span>{`${attribute.value}`}</span>
+                </If>
+              </li>
+            </For>
+          </ul>
+        </If>
+        <p class="price">
+          {product.price}
+          <span />
+          $
+        </p>
+        <div class="action">
+
+          <Button type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
+          <Link class="button" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 
 );

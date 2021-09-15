@@ -7,12 +7,9 @@ export const CheckoutList = ({ productList }) => (
       <For each="position" of={productList.positions}>
         <tr>
           <td>
-            {' '}
             {position.product.title}
-            {' '}
           </td>
           <td>
-            {' '}
             {position.quantity}
           </td>
           <td>
@@ -20,7 +17,6 @@ export const CheckoutList = ({ productList }) => (
             $
           </td>
         </tr>
-
       </For>
     </table>
     <p>

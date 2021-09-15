@@ -1,25 +1,37 @@
 .checkout-form {
-  width: 400px;
+  width: 600px;
+  padding: 20px;
   color: var(--color-black);
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-regular);
   text-decoration: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
 
   fieldset {
-    margin-bottom: 10px;
+    flex-grow: 1;
+    margin: 10px 0;
+  }
+
+  .form__client-info {
+    display: flex;
+
+    fieldset:first-of-type {
+      margin-right: 15px;
+    }
   }
 
   address {
     margin: 20px;
   }
 
-  .checkout-form__radio-group {
-    margin: 15px;
+  .form__radio-group {
 
-    .checkout-form__radio-group-button {
-      margin-left: 5px;
+    .form__radio-group--button {
 
       input {
+        width: 15px;
+        height: 15px;
         margin-right: 25px;
       }
     }

@@ -17,7 +17,22 @@
         "slug": "iphone-12-64gb-space-grey",
         "price": "800",
         "imageUrl": "/images/iphone-12.png"
-      }
+      },
+      {
+              "id": "116",
+              "title": "iPhone 12 64 GB",
+              "slug": "iphone-12-64gb-space-grey",
+              "price": "800",
+              "imageUrl": "/images/iphone-12.png"
+            },
+            {
+                    "id": "117",
+                    "title": "iPhone 12 64 GB",
+                    "slug": "iphone-12-64gb-space-grey",
+                    "price": "800",
+                    "imageUrl": "/images/iphone-12.png"
+                  }
+
     ]
   },
   {

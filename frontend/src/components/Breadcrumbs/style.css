@@ -1,0 +1,36 @@
+.steps {
+  display: flex;
+  height: var(--header-height)/2;
+  margin: 20px 0 0 0;
+  list-style: none;
+
+  .step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-right: 20px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+
+    a {
+      color: var(--color-light-blue);
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      color: var(--color-blue);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  a::after {
+    top: 0;
+    width: 10px;
+    height: 10px;
+    margin-left: 20px;
+    font-weight: var(--font-weight-bold);
+    content: '>';
+  }
+}

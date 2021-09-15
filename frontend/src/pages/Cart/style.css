@@ -1,18 +1,21 @@
 .cart {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
 
   .cart__link {
-    padding: 10px 18px;
-    color: var(--color-black);
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
-    transition: 0.6s;
-    border-radius: .4rem;
+    padding: 10px 25px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: 0;
+    border-radius: 0.4rem;
 
     &:hover {
-      box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.5em;
-      transition: 0.6s;
+      background-color: var(--color-black);
+      border: 0;
     }
   }
 }

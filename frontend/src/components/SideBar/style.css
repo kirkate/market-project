@@ -1,18 +1,27 @@
 .sidebar {
+  padding: 20px 0;
+  border-radius: 0.4rem;
 
   ul {
-    width: 100px;
+    width: 200px;
+    margin: 0;
     color: var(--color-black);
     font-weight: var(--font-weight);
-    list-style-type: '+ ';
+    list-style: none;
 
     li {
       padding: 8px;
       font-weight: var(--font-weight-bold);
+      border-bottom: var(--border-transparent);
 
       a {
-        font-size: 14px;
+        font-size: 18px;
       }
+    }
+
+    li:hover {
+      border-bottom: var(--border-blue);
+      transition: width 0.3s;
     }
   }
 }

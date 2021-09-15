@@ -1,7 +1,10 @@
 @import '../components/Banner/style.css';
+@import '../components/AccessoriesList/style.css';
 @import '../components/Button/style.css';
+@import '../components/Breadcrumbs/style.css';
 @import '../components/Header/style.css';
 @import '../components/SideBar/style.css';
+@import '../components/CartNotification/style.css';
 @import '../components/Container/style.css';
 @import '../components/Categories/style.css';
 @import '../components/CheckoutForm/style.css';
@@ -9,5 +12,6 @@
 @import '../components/Products/style.css';
 @import '../components/CartTable/style.css';
 @import '../pages/Cart/style.css';
+@import '../pages/Product/style.css';
 @import '../pages/Checkout/style.css';
 @import '../components/ProductDetails/style.css';

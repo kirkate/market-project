@@ -24,11 +24,15 @@ export const Cart = () => {
   return (
     <Container>
       <section class="cart">
-        <CartTable cart={cart} onDelete={handleDeleteProduct} onQuantityChange={handleChangeQuantity} />
-        <If condition={cart.positions?.length > 0}>
+        <If condition={cart.positions.length > 0}>
+          <CartTable cart={cart} onDelete={handleDeleteProduct} onQuantityChange={handleChangeQuantity} />
           <Link class="cart__link" to={routes.checkout}>Purchase</Link>
         </If>
+        <If condition={!cart.positions.length}>
+          <h3>Your Cart is empty.</h3>
+        </If>
       </section>
+
     </Container>
   );
 };

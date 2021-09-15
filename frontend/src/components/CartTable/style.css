@@ -1,7 +1,12 @@
 .cart-form {
-font-weight: var(--font-weight-bold);
-color: var(--color-black);
-font-size: 14px;
+  width: 100%;
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-regular);
+
+  .cart-form__price {
+    text-align: end;
+  }
 
   .cart-form__list {
 
@@ -9,7 +14,13 @@ font-size: 14px;
       width: 70px;
     }
 
+    td:last-of-type,
+    th:last-of-type {
+      text-align: end;
+    }
+
     button {
+      padding: 10px;
       color: var(--color-black);
       background-color: var(--color-white);
       border: var(--border);

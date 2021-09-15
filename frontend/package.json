@@ -15,7 +15,7 @@
     "lint:fix": "yarn lint:css:fix && yarn lint:ts:fix",
     "lint:ts": "eslint ./src --ext .ts,.tsx",
     "lint:ts:fix": "yarn lint:ts --fix",
-    "lint:css": "stylelint ./src",
+    "lint:css": "stylelint ./src/**/*.css",
     "lint:css:fix": "yarn lint:css --fix",
     "test": "jest"
   },

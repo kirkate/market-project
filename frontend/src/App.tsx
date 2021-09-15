@@ -11,10 +11,12 @@ import { Header } from './components/Header';
 import { Product } from './pages/Product';
 import { Products } from './components/Products';
 import { Categories } from './components/Categories';
+import { Breadcrumbs } from './components/Breadcrumbs';
 
 export const App = () => (
   <Router basename="/">
     <Header />
+    <Breadcrumbs />
     <Switch>
       <Route exact path={routes.home} component={Home} />
       <Route path={routes.cart} component={Cart} />

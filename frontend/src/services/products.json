@@ -5,6 +5,8 @@
 		"slug": "iphone-12-64gb-space-grey",
 		"title": "iPhone 12 64 GB",
 		"price": "800",
+		"code" : "1111",
+		"availability" : true,
 		"imageUrl": "/images/iphone-12.png",
 		"description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
 		"attributes": [
@@ -24,6 +26,8 @@
 		"slug": "iphone-12-128gb-gold",
 		"title": "iPhone 12 128 GB ",
 		"price": "700",
+		"code" : "1112",
+		"availability" : true,
 		"imageUrl": "/images/iphone-12.png",
 		"description": "Ceramic Shield front. Glass back and aluminum design",
 		"attributes": [
@@ -46,6 +50,9 @@
 	,
 		"price": "400"
 	,
+		"code" : "1113",
+
+		"availability" : false,
 		"imageUrl": "/images/iphone-12.png"
 	,
 		"description": "Fingerprint-resistant homophobic coating."
@@ -71,6 +78,9 @@
 	,
 		"price": "400"
 	,
+		"code" : "1114",
+
+		"availability" : true,
 		"imageUrl": "/images/iphone-12.png"
 	,
 		"description": "Fingerprint-resistant homophobic coating."
@@ -91,6 +101,9 @@
 		"slug": "iphone-11-128gb-black",
 		"title": "iPhone 11 128 GB",
 		"price": "400",
+
+		"availability" : true,
+		"code" : "1115",
 		"imageUrl": "/images/iphone-12.png",
 		"description": "Fingerprint-resistant homophobic coating.",
 		"attributes": [
@@ -104,6 +117,89 @@
 				"name": "Memory",
 				"value": "128GB"
 			}]
+	},
+	"116": {
+		"id": "116",
+		"slug": "iphone-12-64gb-space-grey",
+		"title": "iPhone 12 64 GB",
+		"price": "800",
+		"code" : "1111",
+		"availability" : true,
+		"imageUrl": "/images/iphone-12.png",
+		"description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
+		"attributes": [
+			{
+				"type": "color",
+				"name": "Color",
+				"value": "space-grey"
+			},
+			{
+				"type": "text",
+				"name": "Memory",
+				"value": "64GB"
+			}]
+	},
+	"117": {
+		"id": "117",
+		"slug": "iphone-12-256gb-space-grey",
+		"title": "iPhone 12 256 GB",
+		"price": "800",
+		"code" : "1111",
+		"availability" : true,
+		"imageUrl": "/images/iphone-12.png",
+		"description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
+		"attributes": [
+			{
+				"type": "color",
+				"name": "Color",
+				"value": "space-grey"
+			},
+			{
+				"type": "text",
+				"name": "Memory",
+				"value": "256GB"
+			}]
+	},
+	"118": {
+		"id": "118",
+		"slug": "iphone-12-64gb-space-grey",
+		"title": "iPhone 12 64 GB",
+		"price": "800",
+		"code" : "1111",
+		"availability" : true,
+		"imageUrl": "/images/iphone-12.png",
+		"description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
+		"attributes": [
+			{
+				"type": "color",
+				"name": "Color",
+				"value": "space-grey"
+			},
+			{
+				"type": "text",
+				"name": "Memory",
+				"value": "64GB"
+			}]
+	},
+	"119": {
+		"id": "119",
+		"slug": "iphone-12-64gb-space-grey",
+		"title": "iPhone 12 64 GB",
+		"price": "800",
+		"code" : "1111",
+		"availability" : true,
+		"imageUrl": "/images/iphone-12.png",
+		"description": "The rear camera consists of a 12 MP (wide) + 12 MP (ultras) lenses.",
+		"attributes": [
+			{
+				"type": "color",
+				"name": "Color",
+				"value": "space-grey"
+			},
+			{
+				"type": "text",
+				"name": "Memory",
+				"value": "64GB"
+			}]
 	}
 }
-

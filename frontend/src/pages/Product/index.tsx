@@ -7,24 +7,36 @@ import { getProduct, getIdBySlug } from '../../services/api';
 import { Container } from '../../components/Container';
 import { CartService } from '../../services/cartService';
 
+import { CartNotification } from '../../components/CartNotification';
+
 export const Product = () => {
   const params = useParams();
   const [productDetails, setProductsDetails] = useState({});
+  const [showAccessories, setShowAccessories] = useState(false);
+  const [cartTrigger, setCartTrigger] = useState(false);
 
   useEffect(() => {
     const productID = getIdBySlug(params.productSlug, 'products');
     getProduct(productID).then((result) => setProductsDetails(result));
   }, []);
+
   const handleAddToCart = (product) => {
     CartService.addItem(product);
-  };
 
+    setCartTrigger(true);
+    setTimeout(() => setCartTrigger(false), 2000);
+    setShowAccessories(true);
+  };
   return (
     <Container>
       <section class="product-page">
         <ProductDetails product={productDetails} onHandleAddToCart={handleAddToCart} />
-        <AccessoriesList />
+        <If condition={showAccessories}>
+          <AccessoriesList />
+        </If>
+
       </section>
+      <CartNotification cartTrigger={cartTrigger} />
     </Container>
   );
 };
