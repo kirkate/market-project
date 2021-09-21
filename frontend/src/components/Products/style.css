@@ -24,13 +24,12 @@
 
   &__details,
   &__link {
+    color: var(--color-black);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-regular);
   }
 
   &__image-block {
-    margin: 0;
-    overflow: hidden;
     cursor: pointer;
   }
 

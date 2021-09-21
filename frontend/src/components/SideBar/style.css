@@ -22,6 +22,11 @@
   }
 
   &__link {
+    color: var(--color-black);
     font-size: 18px;
+  }
+
+  &__link:hover {
+    color: var(--color-black);
   }
 }
