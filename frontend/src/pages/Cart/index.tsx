@@ -32,7 +32,6 @@ export const Cart = () => {
           <h3>Your Cart is empty.</h3>
         </If>
       </section>
-
     </Container>
   );
 };

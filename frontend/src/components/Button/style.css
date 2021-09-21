@@ -1,14 +1,30 @@
-button {
+.regular-button {
   margin: 0;
   color: var(--color-white);
   line-height: 0;
   background-color: var(--color-black);
-  border: 0;
+  border: var(--border);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-black);
     line-height: 0;
     background-color: var(--color-white);
     border: var(--border);
+  }
+}
+
+.secondary-button {
+  padding: 10px;
+  color: var(--color-black);
+  line-height: 0;
+  background-color: var(--color-white);
+  border: var(--border);
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-color: var(--color-black);
   }
 }

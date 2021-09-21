@@ -18,32 +18,31 @@ export const Banner = ({ slides, slideTime }) => {
   return (
     <section class="banner">
       <If condition={slides}>
-        <div class="banner__content">
-          <div class="banner__content-slides">
-            <For each="slide" of={slides} index="slideIndex">
-              <figure
-                class={classnames('slide', {
-                  active: slideIndex === activeSlideIndex,
-                })}
-              >
-                <img
-                  src={slide.src}
-                  srcSet={slide.srcset}
-                  sizes={slide.sizes}
-                  alt={slide.alt}
-                />
-              </figure>
-            </For>
-          </div>
-          <div class="banner__content-banner-dots">
-            <For of={slides} index="slideIndex">
-              <div
-                class={classnames('banner-dot', {
-                  active: slideIndex === activeSlideIndex,
-                })}
+        <div class="banner__slides slides">
+          <For each="slide" of={slides} index="slideIndex">
+            <figure
+              class={classnames('slides__item', {
+                active: slideIndex === activeSlideIndex,
+              })}
+            >
+              <img
+                class="slides__img"
+                src={slide.src}
+                srcSet={slide.srcset}
+                sizes={slide.sizes}
+                alt={slide.alt}
               />
-            </For>
-          </div>
+            </figure>
+          </For>
+        </div>
+        <div class="banner__dots dots">
+          <For of={slides} index="slideIndex">
+            <div
+              class={classnames('dots-item', {
+                active: slideIndex === activeSlideIndex,
+              })}
+            />
+          </For>
         </div>
       </If>
     </section>

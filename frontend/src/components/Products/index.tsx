@@ -5,7 +5,7 @@ import { Button } from '../Button';
 import { getIdBySlug, getProductsData } from '../../services/api';
 import { CartService } from '../../services/cartService';
 import { Container } from '../Container';
-import { CartNotification } from '../CartNotification';
+import { Notification } from '../Notification';
 
 export const Products = () => {
   const params = useParams();
@@ -24,23 +24,24 @@ export const Products = () => {
 
   return (
     <Container>
-      <div class="products-page">
+      <div class="products">
         <div>
-          <h1>{params.subCategorySlug}</h1>
+          <h1 class="products__title">{params.subCategorySlug}</h1>
         </div>
 
         <If condition={products}>
-          <ul class="products-page__list">
+          <ul class="products__list">
             <For each="product" of={products}>
-              <li key={product.id} class="products-page__list-info">
-                <Link product={product} to={`/products/${product.slug}`}>
-                  <figure>
+              <li key={product.id} class="products__item">
+                <Link class="products__link" product={product} to={`/products/${product.slug}`}>
+                  <figure class="products__image-block">
                     <img
                       src={product.imageUrl}
                       alt="phone"
+                      class="products__image"
                     />
                   </figure>
-                  <div class="info-details">
+                  <div class="products__details">
                     <p>
                       {product.title}
                       {' '}
@@ -51,7 +52,7 @@ export const Products = () => {
                     </p>
                   </div>
                 </Link>
-                <Button type="button" class="products-page__list-button" onClick={() => handleAddToCart(product)}>
+                <Button type="button" class="regular-button" onClick={() => handleAddToCart(product)}>
                   + add to cart
                 </Button>
 
@@ -60,7 +61,7 @@ export const Products = () => {
           </ul>
         </If>
 
-        <CartNotification cartTrigger={cartTrigger} />
+        <Notification cartTrigger={cartTrigger} />
       </div>
     </Container>
   );

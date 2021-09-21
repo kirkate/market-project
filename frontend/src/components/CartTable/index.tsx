@@ -4,8 +4,8 @@ import { Button } from '../Button';
 export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
   <form class="cart-form">
     <If condition={cart.positions}>
-      <table class="cart-form__list">
-        <thead>
+      <table class="cart-form__table">
+        <thead class="cart-form__thead">
           <tr>
             <th>Product</th>
             <th>Total quantity</th>
@@ -20,11 +20,10 @@ export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
                 <p>{position.product.title}</p>
               </td>
               <td>
-                <fieldset>
+                <fieldset class="cart-form__quantity">
                   <input
                     name="productsQuantity"
                     type="number"
-                    class="cart-list__input"
                     value={position.quantity || 1}
                     min={1}
                     max={100}
@@ -41,6 +40,7 @@ export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
               <td>
                 <Button
                   type="button"
+                  class="secondary-button"
                   onClick={() => onDelete(position.product.id)}
                 >
                   x

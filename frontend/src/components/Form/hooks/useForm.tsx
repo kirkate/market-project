@@ -22,7 +22,6 @@ export const useForm = ({
       [name]: ValidationUtil.validateField(name, value, validations),
     }));
   }, []);
-
   const handleSubmit = useCallback((event) => {
     event.preventDefault();
     const errorCheck = ValidationUtil.validate(values, validations);

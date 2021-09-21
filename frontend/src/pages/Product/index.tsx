@@ -6,8 +6,7 @@ import { AccessoriesList } from '../../components/AccessoriesList';
 import { getProduct, getIdBySlug } from '../../services/api';
 import { Container } from '../../components/Container';
 import { CartService } from '../../services/cartService';
-
-import { CartNotification } from '../../components/CartNotification';
+import { Notification } from '../../components/Notification';
 
 export const Product = () => {
   const params = useParams();
@@ -29,14 +28,13 @@ export const Product = () => {
   };
   return (
     <Container>
-      <section class="product-page">
+      <section class="product">
         <ProductDetails product={productDetails} onHandleAddToCart={handleAddToCart} />
         <If condition={showAccessories}>
           <AccessoriesList />
         </If>
-
       </section>
-      <CartNotification cartTrigger={cartTrigger} />
+      <Notification cartTrigger={cartTrigger} />
     </Container>
   );
 };

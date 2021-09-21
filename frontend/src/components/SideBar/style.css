@@ -2,26 +2,26 @@
   padding: 20px 0;
   border-radius: 0.4rem;
 
-  ul {
+  &__list {
     width: 200px;
     margin: 0;
     color: var(--color-black);
     font-weight: var(--font-weight);
     list-style: none;
+  }
 
-    li {
-      padding: 8px;
-      font-weight: var(--font-weight-bold);
-      border-bottom: var(--border-transparent);
+  &__item {
+    padding: 8px;
+    font-weight: var(--font-weight-bold);
+    border-bottom: var(--border-transparent);
+  }
 
-      a {
-        font-size: 18px;
-      }
-    }
+  &__item:hover {
+    border-bottom: var(--border-blue);
+    transition: width 0.3s;
+  }
 
-    li:hover {
-      border-bottom: var(--border-blue);
-      transition: width 0.3s;
-    }
+  &__link {
+    font-size: 18px;
   }
 }

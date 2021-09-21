@@ -9,23 +9,23 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
       <img src={product.imageUrl} alt="phone" />
     </figure>
     <div class="product__description">
-      <div class="product__description-main">
-        <h3>{product.title}</h3>
-        <p>
+      <div class="product__info info-details">
+        <h3 class="info-details__title">{product.title}</h3>
+        <p class="info-details__text">
           code :
           {' '}
           {' '}
           {product.code}
         </p>
         <If condition={product.availability}>
-          <p class="availability">
+          <p class="info-details__text-availability">
             availability :
             {' '}
             {' '}
           </p>
         </If>
         <If condition={!product.availability}>
-          <p class="unavailability">
+          <p class="info-details__text-unavailability">
             availability :
             {' '}
             {' '}
@@ -34,18 +34,18 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
 
       </div>
 
-      <div class="product__description-info">
+      <div class="product__specifications">
         <If condition={product.attributes}>
-          <ul class="attributies">
+          <ul class="product__attributies attributies">
             <For each="attribute" of={product.attributes}>
-              <li>
+              <li class="product__attribute">
                 <p>
                   {attribute.name}
 
                   :
                 </p>
                 <If condition={attribute.type === 'color'}>
-                  <div className="attribute__color" style={{ backgroundColor: `${attribute.value}` }} />
+                  <div className="product__attributies-color" style={{ backgroundColor: `${attribute.value}` }} />
                 </If>
                 <If condition={attribute.type !== 'color'}>
                   <span>{`${attribute.value}`}</span>
@@ -54,21 +54,17 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
             </For>
           </ul>
         </If>
-        <p class="price">
+        <p class="product__price">
           {product.price}
           <span />
           $
         </p>
-        <div class="action">
-
-          <Button type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
-          <Link class="button" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
+        <div class="product__actions">
+          <Button class="regular-button" type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
+          <Link class="product__actions-blue" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
         </div>
-
       </div>
-
     </div>
-
   </div>
 
 );

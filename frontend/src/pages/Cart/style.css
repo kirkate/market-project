@@ -6,7 +6,7 @@
   border-radius: var(--radius);
   box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
 
-  .cart__link {
+  &__link {
     padding: 10px 25px;
     color: var(--color-white);
     background-color: var(--color-blue);

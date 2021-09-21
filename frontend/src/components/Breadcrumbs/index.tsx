@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { routes } from '../../constants/routes';
 import { Container } from '../Container';
 
 export const Breadcrumbs = () => {
@@ -11,20 +10,20 @@ export const Breadcrumbs = () => {
 
   return (
     <Container>
-      <ul class="steps">
+      <ul class="breadcrumbs">
         {pathnames.length > 0 && (
-          <li class="step">
-            <Link onClick={() => history.push(routes.home)}>Home</Link>
+          <li class="breadcrumbs__step">
+            Home
           </li>
         )}
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
           const isLast = index === pathnames.length - 1;
           return isLast ? (
-            <li class="step" key={name}>{name}</li>
+            <li class="breadcrumbs__step" key={name}>{name}</li>
           ) : (
-            <li class="step">
-              <Link key={name} onClick={() => history.push(routeTo)}>
+            <li class="breadcrumbs__step">
+              <Link class="breadcrumbs__link" key={name} onClick={() => history.push(routeTo)}>
                 {name}
               </Link>
             </li>

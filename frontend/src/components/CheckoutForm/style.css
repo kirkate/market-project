@@ -1,9 +1,9 @@
-.checkout-form {
+.form {
   width: 600px;
   padding: 20px;
   color: var(--color-black);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-regular);
+  font-size: 16px;
   text-decoration: none;
   border-radius: var(--radius);
   box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
@@ -13,26 +13,16 @@
     margin: 10px 0;
   }
 
-  .form__client-info {
+  fieldset:first-of-type {
+    margin-right: 15px;
+  }
+
+  &__client-info {
     display: flex;
-
-    fieldset:first-of-type {
-      margin-right: 15px;
-    }
   }
 
-  address {
+  &__address {
     margin: 20px;
-  }
-
-  .form__radio-group {
-    .form__radio-group--button {
-      input {
-        width: 15px;
-        height: 15px;
-        margin-right: 25px;
-      }
-    }
   }
 
   .validation {

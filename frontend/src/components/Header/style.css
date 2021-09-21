@@ -1,21 +1,27 @@
-header {
+.header {
   box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
-}
 
-.header-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--header-height);
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+  }
 
-  .header-navigation__activity {
+  &__links {
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 250px;
+    margin: 0;
   }
+}
 
-  h3 {
+.navigation-links {
+  font-weight: var(--font-weight-bold);
+
+  .navigation-links__title {
+    margin: 0;
     color: var(--color-black);
     font-weight: var(--font-weight-bold);
     font-size: 18px;
@@ -23,47 +29,35 @@ header {
     text-decoration: none;
   }
 
-  .cart-icon {
+  &__icon {
     position: relative;
   }
 
-  .cart-icon::before {
+  &__icon::before {
     position: absolute;
     top: -8px;
     right: 40px;
-    width: 38px;
-    height: 38px;
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
     background: url('../images/icons/cart.svg') no-repeat 0 0;
     background-position: center;
     background-size: cover;
     content: '';
   }
 
-  .cart-length {
+  &__length {
     position: absolute;
     top: -14px;
     right: 18px;
-    width: 21px;
-    height: 21px;
+    width: 18px;
+    height: 18px;
     color: var(--color-white);
-    font-weight: var(--font-weight-bold);
-    font-size: 12px;
-    line-height: 23px;
+    font-size: 10px;
+    line-height: 20px;
     text-align: center;
     text-indent: 0;
     background-color: var(--color-blue);
     border-radius: 50%;
-  }
-
-  a,
-  h3 {
-    margin: 0;
-  }
-
-  a:focus,
-  a:hover,
-  h3:hover {
-    color: var(--color-blue);
-    cursor: pointer;
   }
 }

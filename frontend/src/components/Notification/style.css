@@ -1,20 +1,17 @@
 
-.cart-notification__trigger {
+.notification {
   position: absolute;
-  right: -8%;
-  bottom: 7%;
+  right: -120px;
+  bottom: 80px;
   z-index: 2;
-  width: 92px;
-  height: 92px;
+  width: 82px;
+  height: 82px;
   padding: 10px;
-  background: url('../images/icons/add-cart.svg') no-repeat 0 0;
-  background-position: center;
+  background: url('../images/icons/add-cart.svg') no-repeat center;
   background-size: 55%;
   border-radius: var(--radius);
   box-shadow: 0 4px 30px rgba(0 0 0 / 0.17);
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  animation: fadeInUp 1s both;
   content: '';
 
   &:hover {
@@ -31,7 +28,6 @@
     font-weight: var(--font-weight-bold);
     line-height: 36px;
     text-align: center;
-    text-indent: 0;
     background-color: var(--color-red);
     border-radius: 50%;
     box-shadow: 0 10px 50px rgba(0 0 0 / 0.23);

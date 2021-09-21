@@ -3,10 +3,10 @@ import { useFormContext } from './context';
 
 export function Fieldset({ label, name, children }) {
   const {
-    values, errors, handleChange,
+    values, errors, handleChange, className,
   } = useFormContext();
   return (
-    <fieldset>
+    <fieldset class={className}>
       <label htmlFor={name}>{ label }</label>
       <div>
         {cloneElement(children, {
@@ -20,7 +20,6 @@ export function Fieldset({ label, name, children }) {
       <If condition={errors[name]}>
         <div class="validation">{errors[name].message}</div>
       </If>
-
     </fieldset>
   );
 }

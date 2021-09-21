@@ -1,17 +1,19 @@
-.filter-categories {
+.categories {
   display: flex;
   padding-top: 30px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    font-size: var(--font-size-regular);
+    text-decoration: none;
+    list-style: none;
+  }
 }
 
 .sub-categories {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 50px;
-  font-size: var(--font-size-regular);
-  text-decoration: none;
-  list-style: none;
-
-  li {
+  &__item {
     width: 270px;
     margin-right: 10px;
     font-weight: var(--font-weight-bold);
@@ -19,32 +21,27 @@
     text-align: center;
     border-radius: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
-
-    a {
-      display: block;
-      padding: 10px 0;
-      color: var(--color-white);
-      background-color: var(--color-blue);
-      border-radius: 0 0 0.4rem 0.4rem;
-    }
-
-    p {
-      margin: 14px 0;
-      color: var(--color-black);
-    }
-
-    figure {
-      margin: 0;
-
-      img {
-        width: 150px;
-        margin: 0 auto;
-      }
-    }
   }
 
-  a:focus,
-  a:hover {
-    cursor: pointer;
+  &__link {
+    display: block;
+    padding: 10px 0;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 0 0 0.4rem 0.4rem;
+  }
+
+  &__text {
+    margin: 14px 0;
+    color: var(--color-black);
+  }
+
+  &__image-block {
+    margin: 0;
+  }
+
+  &__image {
+    width: 150px;
+    margin: 0 auto;
   }
 }
