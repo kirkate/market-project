@@ -4,12 +4,12 @@ import { Button } from '../Button';
 import { routes } from '../../constants/routes';
 
 export const ProductDetails = ({ product, onHandleAddToCart }) => (
-  <div class="product">
+  <div class="product-details">
     <figure>
       <img src={product.imageUrl} alt="phone" />
     </figure>
-    <div class="product__description">
-      <div class="product__info info-details">
+    <div class="product-details__description">
+      <div class="product-details__info info-details">
         <h3 class="info-details__title">{product.title}</h3>
         <p class="info-details__text">
           code :
@@ -34,18 +34,18 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
 
       </div>
 
-      <div class="product__specifications">
+      <div class="product-details__specifications">
         <If condition={product.attributes}>
-          <ul class="product__attributies attributies">
+          <ul class="product-details__attributies attributies">
             <For each="attribute" of={product.attributes}>
-              <li class="product__attribute">
+              <li class="product-details__attribute">
                 <p>
                   {attribute.name}
 
                   :
                 </p>
                 <If condition={attribute.type === 'color'}>
-                  <div className="product__attributies-color" style={{ backgroundColor: `${attribute.value}` }} />
+                  <div className="product-details__attributies-color" style={{ backgroundColor: `${attribute.value}` }} />
                 </If>
                 <If condition={attribute.type !== 'color'}>
                   <span>{`${attribute.value}`}</span>
@@ -54,14 +54,14 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
             </For>
           </ul>
         </If>
-        <p class="product__price">
+        <p class="product-details__price">
           {product.price}
           <span />
           $
         </p>
-        <div class="product__actions">
+        <div class="product-details__actions">
           <Button class="regular-button" type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
-          <Link class="product__actions-blue" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
+          <Link class="product-details__actions-blue" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
         </div>
       </div>
     </div>

@@ -9,13 +9,15 @@
   &__link {
     padding: 10px 25px;
     color: var(--color-white);
+    font-weight: var(--font-weight-bold);
     background-color: var(--color-blue);
     border: 0;
     border-radius: 0.4rem;
+  }
 
-    &:hover {
-      background-color: var(--color-black);
-      border: 0;
-    }
+  &__link:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 0;
   }
 }

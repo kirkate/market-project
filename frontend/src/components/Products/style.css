@@ -1,6 +1,4 @@
 .products {
-  text-align: center;
-
   &__title {
     color: var(--color-light-blue);
     font-weight: var(--font-weight-bold);
@@ -12,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    text-align: center;
     list-style: none;
   }
 

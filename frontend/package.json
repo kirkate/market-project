@@ -34,6 +34,7 @@
     "css-loader": "5.2.0",
     "cssnano": "4.1.11",
     "milligram": "1.4.1",
+    "normalize": "^0.3.1",
     "postcss": "8.2.9",
     "postcss-custom-media": "8.0.0",
     "postcss-import": "14.0.1",
