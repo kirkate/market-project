@@ -8,13 +8,13 @@
   border-radius: var(--radius);
   box-shadow: 0 10px 50px rgb(0 0 0 / 10%);
 
-  fieldset {
+  &__fieldset {
     flex-grow: 1;
     margin: 10px 0;
-  }
 
-  fieldset:first-of-type {
-    margin-right: 15px;
+    &:first-of-type {
+      margin-right: 15px;
+    }
   }
 
   &__client-info {
@@ -25,7 +25,7 @@
     margin: 20px;
   }
 
-  .validation {
+  &__validation {
     margin-top: 5px;
     color: var(--color-red);
     font-weight: 400;

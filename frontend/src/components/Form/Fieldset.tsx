@@ -1,9 +1,11 @@
 import { h, cloneElement } from 'preact';
 import { useFormContext } from './context';
 
-export function Fieldset({ label, name, children }) {
+export function Fieldset({
+  label, name, children, className,
+}) {
   const {
-    values, errors, handleChange, className,
+    values, errors, handleChange,
   } = useFormContext();
   return (
     <fieldset class={className}>

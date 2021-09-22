@@ -30,17 +30,17 @@ export const Categories = () => {
       <div class="categories">
         <SideBar categories={categories} />
         <If condition={subCategories}>
-          <ul class="categories__list sub-categories">
+          <ul class="categories__list">
             <For each="subCategory" of={subCategories}>
-              <li key={subCategory.id} class="sub-categories__item">
-                <figure class="sub-categories__image-block">
+              <li key={subCategory.id} class="categories__category">
+                <figure class="categories__image-block">
                   <img
-                    class="sub-categories__image"
+                    class="categories__image"
                     src={subCategory.imageUrl}
                     alt="phone"
                   />
                 </figure>
-                <p class="sub-categories__text">
+                <p class="categories__text">
                   {subCategory.priceRange.from}
                   {' '}
                   {' '}
@@ -56,7 +56,7 @@ export const Categories = () => {
                 <a
                   href={`/store/${params.categorySlug}/${subCategory.id}`}
                   onClick={handleSubCategoryClick.bind(null, subCategory.slug)}
-                  class="sub-categories__link"
+                  class="categories__link"
                 >
 
                   {subCategory.title}

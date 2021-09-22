@@ -9,23 +9,23 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
       <img src={product.imageUrl} alt="phone" />
     </figure>
     <div class="product-details__description">
-      <div class="product-details__info info-details">
-        <h3 class="info-details__title">{product.title}</h3>
-        <p class="info-details__text">
+      <div class="product-details__info">
+        <h3 class="product-details__title">{product.title}</h3>
+        <p class="product-details__text">
           code :
           {' '}
           {' '}
           {product.code}
         </p>
         <If condition={product.availability}>
-          <p class="info-details__text-availability">
+          <p class="product-details__text-availability">
             availability :
             {' '}
             {' '}
           </p>
         </If>
         <If condition={!product.availability}>
-          <p class="info-details__text-unavailability">
+          <p class="product-details__text-unavailability">
             availability :
             {' '}
             {' '}
@@ -36,7 +36,7 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
 
       <div class="product-details__specifications">
         <If condition={product.attributes}>
-          <ul class="product-details__attributies attributies">
+          <ul class="product-details__attributies-list ">
             <For each="attribute" of={product.attributes}>
               <li class="product-details__attribute">
                 <p>
@@ -60,8 +60,10 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
           $
         </p>
         <div class="product-details__actions">
-          <Button class="regular-button" type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
+          <Button class="button--regular" type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
+
           <Link class="product-details__actions-blue" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
+
         </div>
       </div>
     </div>

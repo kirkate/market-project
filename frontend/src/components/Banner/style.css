@@ -2,29 +2,27 @@
   position: relative;
   height: calc(100vh - var(--header-height));
 
-  .slides {
-    &__item {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      max-height: 100%;
-      margin: 0;
-      transition: opacity 500ms ease-in-out;
-    }
+  &__slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 100%;
+    margin: 0;
+    transition: opacity 500ms ease-in-out;
 
-    &__item:not(.active) {
+    &:not(.active) {
       visibility: hidden;
       opacity: 0;
     }
-
-    &__img {
-      max-width: 100%;
-    }
   }
 
-  .dots {
+  &__img {
+    max-width: 100%;
+  }
+
+  &__dots {
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -32,16 +30,16 @@
     justify-content: space-between;
     width: 200px;
     transform: translateX(-50%);
+  }
 
-    .dots-item {
-      width: 4px;
-      height: 4px;
-      background-color: transparent;
-      border: 2px solid var(--color-white);
-      border-radius: 50%;
-    }
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
 
-    .dots-item:not(.active) {
+    &:not(.active) {
       background-color: var(--color-white);
       border: 2px solid var(--color-white);
     }

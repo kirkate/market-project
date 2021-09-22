@@ -23,46 +23,48 @@ export const Products = () => {
   }, [params.subCategorySlug]);
 
   return (
-    <Container>
-      <div class="products">
-        <div>
-          <h1 class="products__title">{params.subCategorySlug}</h1>
+    <div>
+      <Container>
+        <div class="products">
+          <div>
+            <h1 class="products__title">{params.subCategorySlug}</h1>
+          </div>
+
+          <If condition={products}>
+            <ul class="products__list">
+              <For each="product" of={products}>
+                <li key={product.id} class="products__item">
+                  <Link class="products__link" product={product} to={`/products/${product.slug}`}>
+                    <figure class="products__image-block">
+                      <img
+                        src={product.imageUrl}
+                        alt="phone"
+                        class="products__image"
+                      />
+                    </figure>
+                    <div class="products__details">
+                      <p>
+                        {product.title}
+                        {' '}
+                      </p>
+                      <p>
+                        {product.price}
+                        $
+                      </p>
+                    </div>
+                  </Link>
+                  <Button type="button" class="button--regular" onClick={() => handleAddToCart(product)}>
+                    + add to cart
+                  </Button>
+
+                </li>
+              </For>
+            </ul>
+          </If>
+
         </div>
-
-        <If condition={products}>
-          <ul class="products__list">
-            <For each="product" of={products}>
-              <li key={product.id} class="products__item">
-                <Link class="products__link" product={product} to={`/products/${product.slug}`}>
-                  <figure class="products__image-block">
-                    <img
-                      src={product.imageUrl}
-                      alt="phone"
-                      class="products__image"
-                    />
-                  </figure>
-                  <div class="products__details">
-                    <p>
-                      {product.title}
-                      {' '}
-                    </p>
-                    <p>
-                      {product.price}
-                      $
-                    </p>
-                  </div>
-                </Link>
-                <Button type="button" class="regular-button" onClick={() => handleAddToCart(product)}>
-                  + add to cart
-                </Button>
-
-              </li>
-            </For>
-          </ul>
-        </If>
-
-        <Notification cartTrigger={cartTrigger} />
-      </div>
-    </Container>
+      </Container>
+      <Notification cartTrigger={cartTrigger} />
+    </div>
   );
 };

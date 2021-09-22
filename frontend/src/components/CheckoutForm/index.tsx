@@ -15,10 +15,10 @@ export const CheckoutForm = () => {
   return (
     <Form initialValues={initialValues} validations={validations} class="form">
       <div class="form__client-info">
-        <Fieldset class="form__input" label="First name" name="firstname">
+        <Fieldset class="form__fieldset" label="First name" name="firstname">
           <input name="firstname" type="text" placeholder="Name" />
         </Fieldset>
-        <Fieldset class="form__input" label="Phone" name="phone">
+        <Fieldset class="form__fieldset" label="Phone" name="phone">
           <input name="phone" type="tel" placeholder="Phone number" />
         </Fieldset>
       </div>
@@ -42,10 +42,10 @@ export const CheckoutForm = () => {
       </RadioGroup>
       <ConditionalSection name="deliveryType" value={deliveryByPost}>
         <div className="form__client-info">
-          <Fieldset label="City" name="city">
+          <Fieldset class="form__fieldset" label="City" name="city">
             <input name="city" type="text" />
           </Fieldset>
-          <Fieldset label="Post office №" name="postOffice">
+          <Fieldset class="form__fieldset" label="Post office №" name="postOffice">
             <input name="postOffice" type="text" />
           </Fieldset>
         </div>
@@ -72,10 +72,10 @@ export const CheckoutForm = () => {
           </RadioButton>
         </RadioGroup>
       </ConditionalSection>
-      <Fieldset label="Description" name="description">
+      <Fieldset class="form__fieldset" label="Description" name="description">
         <textarea name="description" />
       </Fieldset>
-      <Button class="regular-button" type="submit">Submit</Button>
+      <Button class="button--regular" type="submit">Submit</Button>
     </Form>
   );
 };

@@ -8,19 +8,7 @@
     height: var(--header-height);
   }
 
-  &__links {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    margin: 0;
-  }
-}
-
-.navigation-links {
-  font-weight: var(--font-weight-bold);
-
-  .navigation-links__title {
+  &__title {
     margin: 0;
     color: var(--color-black);
     font-weight: var(--font-weight-bold);
@@ -31,33 +19,42 @@
 
   &__icon {
     position: relative;
+
+    &::before {
+      position: absolute;
+      top: -8px;
+      right: 40px;
+      width: 35px;
+      height: 35px;
+      font-size: 12px;
+      background: url('../images/icons/cart.svg') no-repeat 0 0;
+      background-position: center;
+      background-size: cover;
+      content: '';
+    }
+
+    &--length {
+      position: absolute;
+      top: -14px;
+      right: 18px;
+      width: 18px;
+      height: 18px;
+      color: var(--color-white);
+      font-size: 10px;
+      line-height: 20px;
+      text-align: center;
+      text-indent: 0;
+      background-color: var(--color-blue);
+      border-radius: 50%;
+    }
   }
 
-  &__icon::before {
-    position: absolute;
-    top: -8px;
-    right: 40px;
-    width: 35px;
-    height: 35px;
-    font-size: 12px;
-    background: url('../images/icons/cart.svg') no-repeat 0 0;
-    background-position: center;
-    background-size: cover;
-    content: '';
-  }
-
-  &__length {
-    position: absolute;
-    top: -14px;
-    right: 18px;
-    width: 18px;
-    height: 18px;
-    color: var(--color-white);
-    font-size: 10px;
-    line-height: 20px;
-    text-align: center;
-    text-indent: 0;
-    background-color: var(--color-blue);
-    border-radius: 50%;
+  &__links {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 0;
+    font-weight: var(--font-weight-bold);
   }
 }

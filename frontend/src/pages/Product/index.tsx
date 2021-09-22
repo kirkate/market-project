@@ -27,14 +27,16 @@ export const Product = () => {
     setShowAccessories(true);
   };
   return (
-    <Container>
-      <section class="product">
-        <ProductDetails product={productDetails} onHandleAddToCart={handleAddToCart} />
-        <If condition={showAccessories}>
-          <AccessoriesList />
-        </If>
-      </section>
+    <div>
+      <Container>
+        <section class="product">
+          <ProductDetails product={productDetails} onHandleAddToCart={handleAddToCart} />
+          <If condition={showAccessories}>
+            <AccessoriesList />
+          </If>
+        </section>
+      </Container>
       <Notification cartTrigger={cartTrigger} />
-    </Container>
+    </div>
   );
 };

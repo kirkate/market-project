@@ -1,4 +1,4 @@
-.regular-button {
+.button--regular {
   margin: 0;
   color: var(--color-white);
   line-height: 0;
@@ -14,7 +14,7 @@
   }
 }
 
-.secondary-button {
+.button--secondary {
   padding: 10px;
   color: var(--color-black);
   line-height: 0;

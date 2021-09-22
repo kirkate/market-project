@@ -14,17 +14,17 @@
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
     transition: 0.3s ease-in-out;
-  }
 
-  &__step:not(:last-child)::after {
-    width: 10px;
-    margin: 0 0 0 20px;
-    color: var(--color-light-blue);
-    content: '>';
-  }
+    &:not(:last-child)::after {
+      width: 10px;
+      margin: 0 0 0 20px;
+      color: var(--color-light-blue);
+      content: '>';
+    }
 
-  &__step:last-child {
-    color: var(--color-light-blue);
+    &:last-child {
+      color: var(--color-light-blue);
+    }
   }
 
   &__link {

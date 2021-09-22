@@ -26,22 +26,22 @@
     margin-right: 30px;
     background-color: #eee;
     border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      display: none;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      content: '';
+    }
   }
 
   &__input:checked ~ &__checkmark {
     background-color: #2196f3;
-  }
-
-  &__checkmark::after {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    display: none;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    content: '';
   }
 
   &__input:checked ~ &__checkmark::after {

@@ -40,7 +40,7 @@ export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
               <td>
                 <Button
                   type="button"
-                  class="secondary-button"
+                  class="button--secondary"
                   onClick={() => onDelete(position.product.id)}
                 >
                   x

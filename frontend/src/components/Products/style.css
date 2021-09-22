@@ -29,12 +29,12 @@
     font-size: var(--font-size-regular);
   }
 
-  &__image-block {
-    cursor: pointer;
-  }
-
   &__image {
     transition: all 0.5s;
+
+    &-block {
+      cursor: pointer;
+    }
 
     &:hover {
       transform: scale(1.2);

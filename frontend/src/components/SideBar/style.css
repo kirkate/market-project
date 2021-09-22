@@ -1,7 +1,4 @@
 .sidebar {
-  padding: 20px 0;
-  border-radius: 0.4rem;
-
   &__list {
     width: 200px;
     margin: 0;
@@ -14,19 +11,19 @@
     padding: 8px;
     font-weight: var(--font-weight-bold);
     border-bottom: var(--border-transparent);
-  }
 
-  &__item:hover {
-    border-bottom: var(--border-blue);
-    transition: width 0.3s;
+    &:hover {
+      border-bottom: var(--border-blue);
+      transition: width 0.3s;
+    }
   }
 
   &__link {
     color: var(--color-black);
     font-size: 18px;
-  }
 
-  &__link:hover {
-    color: var(--color-black);
+    &:hover {
+      color: var(--color-black);
+    }
   }
 }

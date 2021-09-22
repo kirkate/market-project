@@ -10,10 +10,8 @@
     text-decoration: none;
     list-style: none;
   }
-}
 
-.sub-categories {
-  &__item {
+  &__category {
     width: 270px;
     margin-right: 10px;
     font-weight: var(--font-weight-bold);
@@ -29,10 +27,10 @@
     color: var(--color-white);
     background-color: var(--color-blue);
     border-radius: 0 0 0.4rem 0.4rem;
-  }
 
-  &__link:hover {
-    color: var(--color-black);
+    &:hover {
+      color: var(--color-black);
+    }
   }
 
   &__text {
