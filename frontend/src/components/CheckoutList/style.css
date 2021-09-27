@@ -3,6 +3,6 @@
   padding: 25px 0;
   color: var(--color-black);
   font-weight: var(--font-weight-bold);
-  background-color: var(--color-white);
   text-align: end;
+  background-color: var(--color-white);
 }
