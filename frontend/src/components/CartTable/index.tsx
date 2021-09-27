@@ -27,6 +27,7 @@ export const CartTable = ({ cart, onDelete, onQuantityChange }) => (
                     value={position.quantity || 1}
                     min={1}
                     max={100}
+                     /* eslint-disable-next-line no-restricted-globals */
                     onChange={() => onQuantityChange(position.product.id, event.target.value)}
                   />
                 </fieldset>

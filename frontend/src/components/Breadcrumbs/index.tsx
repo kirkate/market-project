@@ -23,6 +23,7 @@ export const Breadcrumbs = () => {
             <li class="breadcrumbs__step" key={name}>{name}</li>
           ) : (
             <li class="breadcrumbs__step">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <Link class="breadcrumbs__link" key={name} onClick={() => history.push(routeTo)}>
                 {name}
               </Link>

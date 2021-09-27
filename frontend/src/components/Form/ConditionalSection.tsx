@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { useFormContext } from './context';
 
 export function ConditionalSection({ name, value, children }) {

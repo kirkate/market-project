@@ -45,7 +45,10 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
                   :
                 </p>
                 <If condition={attribute.type === 'color'}>
-                  <div className="product-details__attributies-color" style={{ backgroundColor: `${attribute.value}` }} />
+                  <div
+                    class="product-details__attributies-color"
+                    style={{ backgroundColor: `${attribute.value}` }}
+                  />
                 </If>
                 <If condition={attribute.type !== 'color'}>
                   <span>{`${attribute.value}`}</span>
@@ -60,9 +63,21 @@ export const ProductDetails = ({ product, onHandleAddToCart }) => (
           $
         </p>
         <div class="product-details__actions">
-          <Button class="button--regular" type="button" onClick={() => onHandleAddToCart(product)}>Add to Cart</Button>
+          <Button
+            class="button--regular"
+            type="button"
+            onClick={() => onHandleAddToCart(product)}
+          >
+            Add to Cart
+          </Button>
 
-          <Link class="product-details__actions-blue" onClick={() => onHandleAddToCart(product)} to={routes.checkout}>Buy Now</Link>
+          <Link
+            class="product-details__actions-blue"
+            onClick={() => onHandleAddToCart(product)}
+            to={routes.checkout}
+          >
+            Buy Now
+          </Link>
 
         </div>
       </div>
