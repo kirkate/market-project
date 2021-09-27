@@ -4,10 +4,11 @@
     "stylelint-config-rational-order"
   ],
   "rules": {
-    "declaration-empty-line-before": null,
+    "indentation": 2,
+    "string-quotes": "single",
     "plugin/rational-order": [true, {
       "border-in-box-model": false,
-      "empty-line-between-groups": true
+      "empty-line-between-groups": false
     }]
   }
 }

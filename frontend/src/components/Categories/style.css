@@ -1,7 +1,49 @@
-.filter-categories {
+.categories {
   display: flex;
-}
+  padding-top: 30px;
 
-.subCategories {
-  list-style: none;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    font-size: var(--font-size-regular);
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__category {
+    width: 270px;
+    margin-right: 10px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 0;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 0 0 0.4rem 0.4rem;
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+
+  &__text {
+    margin: 14px 0;
+    color: var(--color-black);
+  }
+
+  &__image-block {
+    margin: 0;
+  }
+
+  &__image {
+    width: 150px;
+    margin: 0 auto;
+  }
 }

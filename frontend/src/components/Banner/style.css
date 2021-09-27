@@ -1,45 +1,40 @@
 .banner {
   position: relative;
-
   height: calc(100vh - var(--header-height));
 
-  .slide {
+  &__slide {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
+    max-height: 100%;
     margin: 0;
-
     transition: opacity 500ms ease-in-out;
 
     &:not(.active) {
       visibility: hidden;
       opacity: 0;
     }
-
-    & img {
-      max-width: 100%;
-    }
   }
 
-  .banner-dots {
-    position: absolute;
-    left: 50%;
+  &__img {
+    max-width: 100%;
+  }
 
+  &__dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
     display: flex;
     justify-content: space-between;
     width: 200px;
-    margin-top: 10px;
-
     transform: translateX(-50%);
   }
 
-  .banner-dot {
+  &__dot {
     width: 4px;
     height: 4px;
-
     background-color: transparent;
     border: 2px solid var(--color-white);
     border-radius: 50%;

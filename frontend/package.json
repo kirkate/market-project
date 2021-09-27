@@ -15,7 +15,7 @@
     "lint:fix": "yarn lint:css:fix && yarn lint:ts:fix",
     "lint:ts": "eslint ./src --ext .ts,.tsx",
     "lint:ts:fix": "yarn lint:ts --fix",
-    "lint:css": "stylelint ./src",
+    "lint:css": "stylelint ./src/**/*.css",
     "lint:css:fix": "yarn lint:css --fix",
     "test": "jest"
   },
@@ -33,16 +33,18 @@
     "core-js": "3.10.0",
     "css-loader": "5.2.0",
     "cssnano": "4.1.11",
+    "milligram": "1.4.1",
+    "normalize": "0.3.1",
     "postcss": "8.2.9",
     "postcss-custom-media": "8.0.0",
     "postcss-import": "14.0.1",
     "postcss-loader": "5.2.0",
     "postcss-nested": "5.0.5",
     "preact": "10.5.13",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "5.2.0",
     "webpack": "5.28.0",
     "webpack-cli": "4.6.0",
-    "yarn": "^1.22.10"
+    "yarn": "1.22.10"
   },
   "devDependencies": {
     "@testing-library/dom": "7.30.3",
@@ -50,7 +52,7 @@
     "@testing-library/user-event": "13.1.1",
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "babel-jest": "26.6.3",
-    "eslint": "7.18.0",
+    "eslint": "7.32.0",
     "eslint-config-airbnb-typescript": "12.3.1",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.4.1",

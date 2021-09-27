@@ -1,12 +1,14 @@
 import { h, cloneElement } from 'preact';
 import { useFormContext } from './context';
 
-export function Fieldset({ label, name, children }) {
+export function Fieldset({
+  label, name, children, className,
+}) {
   const {
     values, errors, handleChange,
   } = useFormContext();
   return (
-    <fieldset>
+    <fieldset class={className}>
       <label htmlFor={name}>{ label }</label>
       <div>
         {cloneElement(children, {
@@ -18,9 +20,8 @@ export function Fieldset({ label, name, children }) {
         })}
       </div>
       <If condition={errors[name]}>
-        <div>{errors[name].message}</div>
+        <div class="validation">{errors[name].message}</div>
       </If>
-
     </fieldset>
   );
 }

@@ -1,0 +1,49 @@
+.notification {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  z-index: 2;
+  width: 82px;
+  height: 82px;
+  padding: 10px;
+  background: url('../images/icons/add-cart.svg') no-repeat center;
+  background-size: 55%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 30px rgba(0 0 0 / 0.17);
+  animation: fadeInUp 1s both;
+  content: '';
+
+  &:hover {
+    box-shadow: 0 10px 50px rgba(0 0 0 / 0.23);
+  }
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    right: -7px;
+    width: 35px;
+    height: 35px;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    line-height: 36px;
+    text-align: center;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    box-shadow: 0 10px 50px rgba(0 0 0 / 0.23);
+    content: '+';
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { Banner } from '../../components/Banner/index';
+import { Banner } from '../../components/Banner';
 import { getBannerData } from '../../services/api';
 
 export const Home = () => {

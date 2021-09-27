@@ -1,0 +1,50 @@
+.radio-container {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &__text {
+    margin-left: 40px;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    margin-right: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      display: none;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  &__input:checked ~ &__checkmark {
+    background-color: #2196f3;
+  }
+
+  &__input:checked ~ &__checkmark::after {
+    display: block;
+  }
+}

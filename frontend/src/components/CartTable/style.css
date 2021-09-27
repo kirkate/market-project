@@ -1,0 +1,23 @@
+.cart-form {
+  width: 100%;
+  color: var(--color-black);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-regular);
+
+  &__price {
+    text-align: end;
+  }
+
+  &__thead {
+    color: var(--color-blue);
+  }
+
+  &__quantity {
+    width: 80px;
+  }
+
+  td:last-of-type,
+  th:last-of-type {
+    text-align: end;
+  }
+}

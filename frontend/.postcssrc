@@ -1,3 +1,3 @@
 {
-  "plugins": ["postcss-nested", "postcss-import", "postcss-custom-media", "cssnano"]
+  "plugins": ["postcss-nested", "postcss-import", "postcss-custom-media"]
 }

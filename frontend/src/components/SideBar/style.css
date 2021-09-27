@@ -1,9 +1,29 @@
 .sidebar {
-  .categories {
+  &__list {
+    width: 200px;
+    margin: 0;
+    color: var(--color-black);
+    font-weight: var(--font-weight);
     list-style: none;
   }
 
-  .category {
-    padding: 8px 15px;
+  &__item {
+    padding: 8px;
+    font-weight: var(--font-weight-bold);
+    border-bottom: var(--border-transparent);
+
+    &:hover {
+      border-bottom: var(--border-blue);
+      transition: width 0.3s;
+    }
+  }
+
+  &__link {
+    color: var(--color-black);
+    font-size: 18px;
+
+    &:hover {
+      color: var(--color-black);
+    }
   }
 }
